@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Simple Documentation Tutorial: OpenRSN
+Documentation Tutorial: OpenRSN
 ===================================
 
 Neutron Transport Package with GUI
@@ -21,6 +21,7 @@ User’s Guide!
    Installation
    License
    Help
+   Publications
 
 
 
