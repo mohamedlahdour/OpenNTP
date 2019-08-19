@@ -20,7 +20,7 @@ Creating JSON Input File
 ************************
 
 The input data file must be in JSON format. The first method is
-to write it directly in Text editor as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from `[Filho et al.,2002]. <https://doi.org/10.1016/S0168-9274(01)00074-5>`_
+to write it directly in **Text editor**  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from `[Filho et al.,2002]. <https://doi.org/10.1016/S0168-9274(01)00074-5>`_
 
 
     .. code-block:: json
@@ -89,8 +89,23 @@ Generating JSON Input File
 **************************
 
 Another method is to use a set of buttons on the left side of the main
-window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on Data Up button the input JSON file will be automatically generated in the window Text editor .
+window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Data Up** button the input JSON file will be automatically generated in the window **Text editor** .
 
 .. image:: _images/insert.png 
 
 
+Geometry Visualization
+**********************
+
+The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File`_ is illustrated in Figure bellow
+
+.. image:: _images/geom.png 
+
+Flux Visualization
+******************
+
+.. image:: _images/flux.png 
+Level symmetric gaussian quadrature sets visualization
+******************************************************
+
+.. image:: _images/ordin.png 

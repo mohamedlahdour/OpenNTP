@@ -88,6 +88,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#graphical-user-interface">Graphical User Interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-json-input-file">Creating JSON Input File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generating-json-input-file">Generating JSON Input File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#geometry-visualization">Geometry Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#flux-visualization">Flux Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#level-symmetric-gaussian-quadrature-sets-visualization">Level symmetric gaussian quadrature sets visualization</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="License.html">License</a></li>
@@ -176,7 +179,7 @@ $ python3 main.py
 <div class="section" id="creating-json-input-file">
 <h2>Creating JSON Input File<a class="headerlink" href="#creating-json-input-file" title="Permalink to this headline">¶</a></h2>
 <p>The input data file must be in JSON format. The first method is
-to write it directly in Text editor as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from <a class="reference external" href="https://doi.org/10.1016/S0168-9274(01)00074-5">[Filho et al.,2002].</a></p>
+to write it directly in <strong>Text editor</strong>  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from <a class="reference external" href="https://doi.org/10.1016/S0168-9274(01)00074-5">[Filho et al.,2002].</a></p>
 <blockquote>
 <div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -244,8 +247,21 @@ to write it directly in Text editor as is shown in the figure bellow, which illu
 <div class="section" id="generating-json-input-file">
 <h2>Generating JSON Input File<a class="headerlink" href="#generating-json-input-file" title="Permalink to this headline">¶</a></h2>
 <p>Another method is to use a set of buttons on the left side of the main
-window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on Data Up button the input JSON file will be automatically generated in the window Text editor .</p>
+window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on <strong>Data Up</strong> button the input JSON file will be automatically generated in the window <strong>Text editor</strong> .</p>
 <img alt="_images/insert.png" src="_images/insert.png" />
+</div>
+<div class="section" id="geometry-visualization">
+<h2>Geometry Visualization<a class="headerlink" href="#geometry-visualization" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>geometry</strong> button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section <a class="reference internal" href="#creating-json-input-file">Creating JSON Input File</a> is illustrated in Figure bellow</p>
+<img alt="_images/geom.png" src="_images/geom.png" />
+</div>
+<div class="section" id="flux-visualization">
+<h2>Flux Visualization<a class="headerlink" href="#flux-visualization" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/flux.png" src="_images/flux.png" />
+</div>
+<div class="section" id="level-symmetric-gaussian-quadrature-sets-visualization">
+<h2>Level symmetric gaussian quadrature sets visualization<a class="headerlink" href="#level-symmetric-gaussian-quadrature-sets-visualization" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/ordin.png" src="_images/ordin.png" />
 </div>
 </div>
 
