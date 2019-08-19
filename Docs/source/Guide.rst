@@ -1,6 +1,21 @@
 User's Guide
 ============
 
+Graphical User Interface
+************************
+
+A graphical user interface written in Python programing language has been developed to simplify the use of package OpenRSN.
+After starting the software by typing the following command line in a terminal:
+
+    .. code-block:: python
+
+         cd OpenRSN
+         $ python3 main.py
+
+A main window (GUI) of the package OpenRSN on an Ubuntu Linux machine will be displayed as in Figure bellow.
+
+.. image:: _images/main.png 
+
 Creating JSON Input File
 ************************
 
@@ -72,3 +87,10 @@ to write it directly in Text editor as is shown in the figure bellow, which illu
 
 Generating JSON Input File
 **************************
+
+Another method is to use a set of buttons on the left side of the main
+window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on Data Up button the input JSON file will be automatically generated in the window Text editor .
+
+.. image:: _images/insert.png 
+
+
