@@ -160,6 +160,71 @@
 <h1>User’s Guide<a class="headerlink" href="#user-s-guide" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="creating-json-input-file">
 <h2>Creating JSON Input File<a class="headerlink" href="#creating-json-input-file" title="Permalink to this headline">¶</a></h2>
+<p>The input data file must be in JSON format. The first method is
+to write it directly in Text editor as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from <a class="reference external" href="https://doi.org/10.1016/S0168-9274(01)00074-5">[Filho et al.,2002].</a></p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of X regions&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Y regions&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;X region thickness per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+      <span class="nt">&quot;Y region thickness per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+      <span class="nt">&quot;Which material goes in each cell&quot;</span><span class="p">:[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span>
+      <span class="nt">&quot;XY number of fine meshes in each cell&quot;</span><span class="p">:[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1.0e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.222589</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.00283283</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.220563</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.216566</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0104347</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.210697</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.301439</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.000513036</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.296069</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.252250</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.250794</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="generating-json-input-file">
 <h2>Generating JSON Input File<a class="headerlink" href="#generating-json-input-file" title="Permalink to this headline">¶</a></h2>
