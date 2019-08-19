@@ -1,0 +1,24 @@
+ F L U X E S  P E R  M E S H  P E R  E N E R G Y  G R O U P
+ ----------------------------------------------------------
+ 
+        M E S H       G R O U P 1
+ 
+           1                  NaN
+           2                  NaN
+           3                  NaN
+           4                  NaN
+           5                  NaN
+           6                  NaN
+           7                  NaN
+           8                  NaN
+           9                  NaN
+          10                  NaN
+ 
+  F L U X E S   A N D    R E A C T I O N    R A T E S
+ ----------------------------------------------------
+ 
+  G R O U P   :  11
+ 
+ REGION     AVERAGE  ABSORPTION  NU*FISSION        SCATTERING RATE
+               FLUX        RATE        RATE    IN GROUP  FROM GROUP
+ 

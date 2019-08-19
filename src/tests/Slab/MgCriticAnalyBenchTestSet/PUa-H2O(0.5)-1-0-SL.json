@@ -1,0 +1,64 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 2,
+      "Total number of regions": 3,
+      "Which material goes in each region":[2, 1, 2],
+      "Size for each material per [cm]": [1.531863, 2.635724, 1.531863],
+      "Number of fine meshes": [31, 52, 31],
+      "Number of Angular Discretization": 4,
+      "The l-order Legendre polonomial": 0,
+      "The n-order Legendre polonomial": 1,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1.0e-8
+    },
+    "materials": [
+      {
+        "id": 1,
+        "nom": "Pu-239(a)",
+        "XSTotal": [0.32640],
+        "XSNuFission": [0.264384],
+        "XSScatter Matrix":[[0.2252161]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 2,
+        "nom": "H2O",
+        "XSTotal": [0.32640],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.293760]],
+        "XSChi":  [0.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 2,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material goes in each region":[1],
+      "Size for each material per [cm]":[15.133706],
+      "Number of fine meshes": [10],
+      "Number of Angular Discretization": 100,
+      "The l-order Legendre polonomial": 0,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1.0e-8
+    },
+    "materials": [
+      {
+        "id": 1,
+        "nom": "URRc-2-0-IN",
+        "XSTotal": [2.9628, 0.88655],
+        "XSNuFission": [0.14324, 0.00412],
+        "XSScatter Matrix":[[[2.87510, 0.00116], 
+                            [0.04536, 0.83807]]],
+        "XSChi":  [0.0, 1.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

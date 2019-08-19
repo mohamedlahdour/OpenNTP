@@ -1,0 +1,67 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 2,
+      "Total number of regions": 3,
+      "Which material goes in each region":[2, 1, 2],
+      "Size for each material per [cm]": [18.30563, 16.856192, 18.30563],
+      "Number of fine meshes": [1000, 1000, 1000],
+      "Number of Angular Discretization": 300,
+      "The l-order Legendre polonomial": 0,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1.0e-8
+    },
+    "materials": [
+      {
+        "id": 1,
+        "nom": "U-D2O",
+        "XSTotal": [0.54628],
+        "XSNuFission": [0.0928676],
+        "XSScatter Matrix":[[0.464338]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 2,
+        "nom": "H2O",
+        "XSTotal": [0.54628],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.491652]],
+        "XSChi":  [0.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

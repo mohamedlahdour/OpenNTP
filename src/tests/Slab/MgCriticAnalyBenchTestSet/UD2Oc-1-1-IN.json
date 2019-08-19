@@ -1,0 +1,30 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material goes in each region": [1],
+      "Size for each material per [cm]": [1.0],
+      "Number of fine meshes": [10],
+      "Number of Angular Discretization": 100,
+      "The l-order Legendre polonomial": 1,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1e-6
+    }, 
+    "materials": [
+      { 
+        "id": 1, 
+        "nom": "UD2Oc-1-1-IN",
+        "XSTotal": [0.54628],
+        "XSNuFission": [0.092670939],
+        "XSScatter Matrix":[[[0.464338]], [[-0.27850447]]],
+        "XSChi":  [1.0]
+      }
+    ]  
+  }  
+}
+
+
+

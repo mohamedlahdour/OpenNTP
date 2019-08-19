@@ -1,0 +1,68 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 3,
+      "Total number of regions": 7,
+      "Which material goes in each region": [1, 2, 1, 2, 3, 2, 1],
+      "Size for each material per [cm]": [2.69541779, 2.409638554, 2.69541779, 2.409638554, 2.69541779, 2.409638554, 2.69541779],
+      "Number of fine meshes": [50, 50, 50, 50, 50, 50, 50],
+      "Number of Angular Discretization": 30,
+      "The l-order Legendre polonomial": 0,
+       "Maximum Iteration": 200,
+      "Epsilon Keff": 1e-8
+    }, 
+    "materials": [
+      { 
+        "id": 1, 
+        "nom": "material 1",
+        "XSTotal": [0.371],
+        "XSNuFission": [0.000],
+        "XSScatter Matrix":[[0.334]],
+        "XSChi":  [0.000]
+      },
+      { 
+        "id": 2, 
+        "nom": "material 2",
+        "XSTotal": [0.415],
+        "XSNuFission": [0.178],
+        "XSScatter Matrix":[[0.334]],
+        "XSChi":  [1.000]
+      },
+      { 
+        "id": 3, 
+        "nom": "material 3",
+        "XSTotal": [0.371],
+        "XSNuFission": [0.000],
+        "XSScatter Matrix":[[0.037]],
+        "XSChi":  [0.000]
+      }
+    ]  
+  }  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

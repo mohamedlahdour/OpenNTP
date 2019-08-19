@@ -1,0 +1,34 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material goes in each region": [1],
+      "Size for each material per [cm]": [1.59212],
+      "Number of fine meshes": [10],
+      "Number of Angular Discretization": 30,
+      "The l-order Legendre polonomial": 1,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1e-8
+    }, 
+    "materials": [
+      { 
+        "id": 1, 
+        "nom": "PUb-1-1-IN",
+        "XSTotal": [1.0],
+        "XSNuFission": [0.6666675],
+        "XSScatter Matrix":[[[0.733333]], [[0.333333]]],
+        "XSChi":  [1.0]
+      }
+    ]  
+  }  
+}
+
+
+
+
+
+
+

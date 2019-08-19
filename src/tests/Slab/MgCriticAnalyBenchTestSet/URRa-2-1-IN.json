@@ -1,0 +1,33 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 2,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material goes in each region": [1],
+      "Size for each material per [cm]": [18.9918],
+      "Number of fine meshes": [1000],
+      "Number of Angular Discretization": 300,
+      "The l-order Legendre polonomial": 1,
+      "Maximum Iteration": 200,
+      "Epsilon Keff": 1e-8
+    }, 
+    "materials": [
+      { 
+        "id": 1, 
+        "nom": "URRa-2-1-IN",
+        "XSTotal": [0.65696, 2.52025],
+        "XSNuFission": [0.002621, 0.12658],
+        "XSScatter Matrix":[[[0.625680, 0.029227], 
+                             [0.000000, 2.44383]], 
+                            [[0.274590, 0.0075737],
+                             [0.00000, 0.83318]]],
+        "XSChi":  [1.0, 0.0]
+      }
+    ]  
+  }  
+}
+
+
+
