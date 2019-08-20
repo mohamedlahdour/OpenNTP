@@ -17,6 +17,14 @@ Neutron Transport Package **OpenRSN** (Open Neutron Transport Package from the R
 The code with its GUI is developed and maintained by `Mohamed LAHDOUR <https://github.com/mohamedlahdour>`_ (PhD student) and Prof. `Tarek EL BARDOUNI  <https://github.com/tarekbardouni>`_ from `University Abdelmalek Essaadi Tetouan Morocco <http://www.fst.ac.ma/site/>`_ .
 
 
+.. admonition:: Recommended publication for citing
+   :class: tip
+
+   Lahdour, M., Bardouni, T. E., Chakir, E., Benaalilou, K., Mohammed, M., Bougueniz, H.,
+   and Yaakoubi, H. E., "`Ntp-ersn: A new package for solving the multigroup neutron
+   transport equation in a slab geometry. <https://doi.org/10.1016/j.apradiso.2018.12.004>`_,"
+   *Applied Radiation and Isotopes*, 145:73 – **84** (2019a).
+
 
 .. toctree::
    :maxdepth: 2
