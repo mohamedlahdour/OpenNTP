@@ -12,14 +12,20 @@ Installing on Linux
         sudo apt-get update
         sudo apt-get install python3
 
-2. You need to install numpy and matplotlib library to run the package OpenRSN:
+2. Open a terminal in a GNU/Linux box and install the following tools:
+    .. code-block:: python
+
+
+        sudo apt-get install gfortran
+
+3. You need to install numpy and matplotlib library to run the package OpenRSN:
     .. code-block:: python
 
         sudo apt-get install python3-pip  
         sudo pip3 install numpy 
         pip3 install numpy matplotlib
 
-3. You need to install PyQt5 on Ubuntu with python3 to run the GUI:
+4. You need to install PyQt5 on Ubuntu with python3 to run the GUI:
     .. code-block:: python
 
         pip3 install --user pyqt5  
@@ -27,12 +33,12 @@ Installing on Linux
         sudo apt-get install pyqt5-dev-tools
         sudo apt-get install qttools5-dev-tools
 
-4. Install the OpenRSN package
+5. Install the OpenRSN package
     .. code-block:: python
 
         git clone  https://github.com/mohamedlahdour/OpenRSN.git
 
-5. Import the *OpenRSN* and run the package in the following way:
+6. Import the *OpenRSN* and run the package in the following way:
     .. code-block:: python
 
          cd OpenRSN

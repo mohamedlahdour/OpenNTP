@@ -25,6 +25,7 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -213,10 +214,10 @@ to write it directly in <strong>Text editor</strong>  as is shown in the figure 
                                           <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
                                           <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
                                           <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span>
-      <span class="nt">&quot;XY number of fine meshes in each cell&quot;</span><span class="p">:[[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
-                                               <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]],</span>
+      <span class="nt">&quot;XY number of fine meshes in each cell&quot;</span><span class="p">:[[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]],</span>
       <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
       <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
       <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
@@ -275,25 +276,188 @@ window [ref], these buttons allow users to insert input data automatically witho
 </div>
 <div class="section" id="geometry-visualization">
 <h4>2.2.4. Geometry Visualization<a class="headerlink" href="#geometry-visualization" title="Permalink to this headline">¶</a></h4>
-<p>The <strong>geometry</strong> button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section <a href="#id1"><span class="problematic" id="id2">`Creating JSON Input File`_</span></a> is illustrated in Figure bellow</p>
+<p>The <strong>geometry</strong> button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section <a href="#id3"><span class="problematic" id="id4">`Creating JSON Input File`_</span></a> is illustrated in Figure bellow</p>
 <img alt="_images/geom.png" src="_images/geom.png" />
 </div>
 <div class="section" id="flux-visualization">
 <h4>2.2.5. Flux Visualization<a class="headerlink" href="#flux-visualization" title="Permalink to this headline">¶</a></h4>
-<p>The <strong>Plot</strong> button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section <a href="#id3"><span class="problematic" id="id4">`Creating JSON Input File`_</span></a>  with four regions and four materials after clicking on the <strong>Plot</strong> button.</p>
+<p>The <strong>Plot</strong> button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section <a href="#id5"><span class="problematic" id="id6">`Creating JSON Input File`_</span></a>  with four regions and four materials after clicking on the <strong>Plot</strong> button.</p>
 <img alt="_images/flux.png" src="_images/flux.png" />
 </div>
 <div class="section" id="level-symmetric-gaussian-quadrature-sets-visualization">
 <h4>2.2.6. Level symmetric gaussian quadrature sets visualization<a class="headerlink" href="#level-symmetric-gaussian-quadrature-sets-visualization" title="Permalink to this headline">¶</a></h4>
-<p>The level-symmetric quadrature set is used in the Discrete Ordinates (SN) method (Lewis and Miller, 1984). The subscript N refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the <strong>Ordinate</strong> button</p>
+<p>The level-symmetric quadrature set is used in the Discrete Ordinates (<span class="math notranslate nohighlight">\(S_{N}\)</span>) method (Lewis and Miller, 1984). The subscript <span class="math notranslate nohighlight">\(N\)</span>.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the <strong>Ordinate</strong> button</p>
 <img alt="_images/ordin.png" src="_images/ordin.png" />
 </div>
 </div>
 <div class="section" id="slab">
 <h3>2.3. Slab<a class="headerlink" href="#slab" title="Permalink to this headline">¶</a></h3>
+<p>Setting up input file for slab geometry in two energy groups with isotropic scattering source.</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of regions&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;Which material goes in each region&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+      <span class="nt">&quot;Size for each material per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">5.630757</span><span class="p">,</span> <span class="mf">9.726784</span><span class="p">,</span> <span class="mf">5.630757</span><span class="p">],</span>
+      <span class="nt">&quot;Number of fine meshes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.88721</span><span class="p">,</span> <span class="mf">2.9727</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.00209</span><span class="p">,</span> <span class="mf">0.07391</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.838920</span><span class="p">,</span> <span class="mf">0.04635</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000767</span><span class="p">,</span> <span class="mf">2.91830</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.88798</span><span class="p">,</span> <span class="mf">2.9865</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.83975</span><span class="p">,</span> <span class="mf">0.04749</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000336</span><span class="p">,</span> <span class="mf">2.96760</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Geometry in a one-dimensional slab</p>
+<img alt="_images/SlabG.png" src="_images/SlabG.png" />
+<p>Flux in a one-dimensional slab</p>
+<img alt="_images/SlabF.png" src="_images/SlabF.png" />
 </div>
 <div class="section" id="cylinder">
 <h3>2.4. Cylinder<a class="headerlink" href="#cylinder" title="Permalink to this headline">¶</a></h3>
+<p>An example for cylindrical  infinite  cell equivalent to the <strong>TRIGA MARK-II</strong> research reactor pin cell is presented here by using 7 energy groups</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of regions&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Which material goes in each region&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+      <span class="nt">&quot;Ray for each region per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.3175</span><span class="p">,</span> <span class="mf">1.82769</span><span class="p">,</span> <span class="mf">1.83150</span><span class="p">,</span> <span class="mf">1.88230</span><span class="p">,</span> <span class="mf">2.285814144</span><span class="p">],</span>
+      <span class="nt">&quot;Number of fine meshes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1.0e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.297551431</span><span class="p">,</span> <span class="mf">0.288909664</span><span class="p">,</span> <span class="mf">0.290306468</span><span class="p">,</span> <span class="mf">0.286637159</span><span class="p">,</span> <span class="mf">0.295583239</span><span class="p">,</span> <span class="mf">0.326837471</span><span class="p">,</span> <span class="mf">0.155639234</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.269680893</span><span class="p">,</span> <span class="mf">0.021221626</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.015676686</span><span class="p">,</span> <span class="mf">0.263059691</span><span class="p">,</span> <span class="mf">0.005057992</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.013507066</span><span class="p">,</span> <span class="mf">0.273815991</span><span class="p">,</span> <span class="mf">0.001186857</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.014034288</span><span class="p">,</span> <span class="mf">0.270365363</span><span class="p">,</span> <span class="mf">0.002092507</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.00079017</span><span class="p">,</span> <span class="mf">0.292969338</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.001078437</span><span class="p">,</span> <span class="mf">0.32539832</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000007539</span><span class="p">,</span> <span class="mf">0.011162732</span><span class="p">,</span> <span class="mf">0.14376993</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.994544</span><span class="p">,</span>  <span class="mf">1.408450959</span><span class="p">,</span> <span class="mf">0.817921932</span><span class="p">,</span> <span class="mf">0.633026483</span><span class="p">,</span> <span class="mf">0.650866502</span><span class="p">,</span> <span class="mf">0.515434679</span><span class="p">,</span> <span class="mf">0.243844582</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.362087986</span><span class="p">,</span> <span class="mf">0.179080763</span><span class="p">,</span> <span class="mf">0.09568437</span><span class="p">,</span> <span class="mf">0.03889374</span><span class="p">,</span> <span class="mf">0.013653221</span><span class="p">,</span> <span class="mf">0.001011529</span><span class="p">,</span> <span class="mf">0.00163296</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">2.739733851</span><span class="p">,</span> <span class="mf">0.036287563</span><span class="p">,</span> <span class="mf">0.014790886</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.038125613</span><span class="p">,</span> <span class="mf">1.255653823</span><span class="p">,</span> <span class="mf">0.014136713</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.166974328</span><span class="p">,</span> <span class="mf">0.274556127</span><span class="p">,</span> <span class="mf">0.320581789</span><span class="p">,</span> <span class="mf">0.00109001</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.036264407</span><span class="p">,</span> <span class="mf">0.11429219</span><span class="p">,</span> <span class="mf">0.651920757</span><span class="p">,</span> <span class="mf">-0.19634513</span><span class="p">,</span> <span class="mf">0.001532029</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.003270334</span><span class="p">,</span> <span class="mf">0.00846593</span><span class="p">,</span> <span class="mf">0.051970962</span><span class="p">,</span> <span class="mf">0.052892578</span><span class="p">,</span> <span class="mf">0.512276254</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.000000452</span><span class="p">,</span> <span class="mf">0.000001176</span><span class="p">,</span> <span class="mf">0.000010132</span><span class="p">,</span> <span class="mf">0.000008685</span><span class="p">,</span> <span class="mf">0.162129535</span><span class="p">,</span> <span class="mf">0.352055605</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000000177</span><span class="p">,</span> <span class="mf">0.000000059</span><span class="p">,</span> <span class="mf">0.001637495</span><span class="p">,</span> <span class="mf">0.098331459</span><span class="p">,</span> <span class="mf">0.142495556</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000390</span><span class="p">,</span> <span class="mf">0.126214</span><span class="p">,</span> <span class="mf">0.872105</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 4&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.153239138</span><span class="p">,</span> <span class="mf">1.012997908</span><span class="p">,</span> <span class="mf">0.947913799</span><span class="p">,</span> <span class="mf">0.908546838</span><span class="p">,</span> <span class="mf">0.966825787</span><span class="p">,</span> <span class="mf">0.46508365</span><span class="p">,</span> <span class="mf">0.201018163</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.810739629</span><span class="p">,</span> <span class="mf">0.066072482</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.070201393</span><span class="p">,</span> <span class="mf">0.778857964</span><span class="p">,</span> <span class="mf">0.018049333</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000005432</span><span class="p">,</span> <span class="mf">0.055959691</span><span class="p">,</span> <span class="mf">0.806723946</span><span class="p">,</span> <span class="mf">0.003927282</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.061596098</span><span class="p">,</span> <span class="mf">0.790102323</span><span class="p">,</span> <span class="mf">0.005981459</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.003658891</span><span class="p">,</span> <span class="mf">0.950937049</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.005035727</span><span class="p">,</span> <span class="mf">0.459136241</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000075732</span><span class="p">,</span> <span class="mf">0.014066679</span><span class="p">,</span> <span class="mf">0.185277698</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.102999797</span><span class="p">,</span> <span class="mf">1.73516897</span><span class="p">,</span> <span class="mf">0.980823407</span><span class="p">,</span> <span class="mf">0.642418097</span><span class="p">,</span> <span class="mf">0.567747919</span><span class="p">,</span> <span class="mf">0.419879925</span><span class="p">,</span> <span class="mf">0.201975672</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">2.631785406</span><span class="p">,</span> <span class="mf">0.437581882</span><span class="p">,</span> <span class="mf">0.00907283</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.609582022</span><span class="p">,</span> <span class="mf">1.041127377</span><span class="p">,</span> <span class="mf">0.071965385</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.141504305</span><span class="p">,</span> <span class="mf">0.538385484</span><span class="p">,</span> <span class="mf">0.292249692</span><span class="p">,</span> <span class="mf">0.002089256</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.036338638</span><span class="p">,</span> <span class="mf">0.123430676</span><span class="p">,</span> <span class="mf">0.814518036</span><span class="p">,</span> <span class="mf">-0.336757332</span><span class="p">,</span> <span class="mf">0.001951418</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.003425563</span><span class="p">,</span> <span class="mf">0.009933065</span><span class="p">,</span> <span class="mf">0.061937554</span><span class="p">,</span> <span class="mf">0.066020159</span><span class="p">,</span> <span class="mf">0.425993565</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000000363</span><span class="p">,</span> <span class="mf">0.000001996</span><span class="p">,</span> <span class="mf">0.000009253</span><span class="p">,</span> <span class="mf">0.00000889</span><span class="p">,</span>  <span class="mf">0.203705679</span><span class="p">,</span> <span class="mf">0.216356046</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000000253</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.001995558</span><span class="p">,</span> <span class="mf">0.110723501</span><span class="p">,</span> <span class="mf">0.089154896</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Geometry in a two-dimensional TRIGA Reactor</p>
+<img alt="_images/TrigaG.png" src="_images/TrigaG.png" />
+<p>The infinite cell in OpenMC <a class="reference external" href="https://openmc.readthedocs.io/en/stable/">OpenMC</a> is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in <a class="reference external" href="https://openrsn.readthedocs.io/en/latest/index.html">OpenRSN</a> and <a class="reference external" href="https://openmc.readthedocs.io/en/stable/">OpenMC</a> are shown in Table below.</p>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Calculate infinite multiplication factor <span class="math notranslate nohighlight">\(k_{inf}\)</span>.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="59%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Surface</th>
+<th class="head"><span class="math notranslate nohighlight">\(k_{inf}\)</span></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>OpenRSN</td>
+<td>1.403180</td>
+</tr>
+<tr class="row-odd"><td>OoenMC</td>
+<td>1.417226</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="sphere">
 <h3>2.5. Sphere<a class="headerlink" href="#sphere" title="Permalink to this headline">¶</a></h3>

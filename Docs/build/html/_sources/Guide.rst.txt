@@ -47,10 +47,10 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
                                                   [3, 3, 3, 4],
                                                   [2, 2, 3, 4],
                                                   [1, 2, 3, 4]],
-              "XY number of fine meshes in each cell":[[2, 2, 2, 2],
-                                                       [2, 2, 2, 2],
-                                                       [2, 2, 2, 2],
-                                                       [2, 2, 2, 2]],
+              "XY number of fine meshes in each cell":[[8, 8, 8, 8],
+                                                       [8, 8, 8, 8],
+                                                       [8, 8, 8, 8],
+                                                       [8, 8, 8, 8]],
               "Number of Angular Discretization": 8,
               "The l-order Legendre polonomial": 0,
               "Maximum Iteration": 200,
@@ -125,17 +125,178 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 2.2.6. Level symmetric gaussian quadrature sets visualization
 -------------------------------------------------------------
 
-The level-symmetric quadrature set is used in the Discrete Ordinates (SN) method (Lewis and Miller, 1984). The subscript N refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
+The level-symmetric quadrature set is used in the Discrete Ordinates (:math:`S_{N}`) method (Lewis and Miller, 1984). The subscript :math:`N`.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
 .. image:: _images/ordin.png 
 
 -----------------------------
 2.3. Slab
 -----------------------------
+Setting up input file for slab geometry in two energy groups with isotropic scattering source.
+
+    .. code-block:: json
+
+        { 
+          "data": { 
+            "parameter": { 
+              "id": 100,
+              "Total number of energy groups": 2,
+              "Total number of Materials": 2,
+              "Total number of regions": 3,
+              "Which material goes in each region": [2, 1, 2],
+              "Size for each material per [cm]": [5.630757, 9.726784, 5.630757],
+              "Number of fine meshes": [50, 50, 50],
+              "Number of Angular Discretization": 8,
+              "The l-order Legendre polonomial": 0,
+              "Maximum Iteration": 200,
+              "Epsilon Keff": 1e-8
+            }, 
+            "materials": [
+              { 
+                "id": 1, 
+                "nom": "material 1",
+                "XSTotal": [0.88721, 2.9727],
+                "XSNuFission": [0.00209, 0.07391],
+                "XSScatter Matrix":[[[0.838920, 0.04635],
+                                     [0.000767, 2.91830]]],
+                "XSChi":  [1.0, 0.0]
+              },
+              { 
+                "id": 2, 
+                "nom": "material 2",
+                "XSTotal": [0.88798, 2.9865],
+                "XSNuFission": [0, 0],
+                "XSScatter Matrix":[[[0.83975, 0.04749],
+                                     [0.000336, 2.96760]]],
+                "XSChi":  [0, 0]
+              }
+            ]  
+          }  
+        }
+
+Geometry in a one-dimensional slab
+
+.. image:: _images/SlabG.png 
+
+Flux in a one-dimensional slab
+
+.. image:: _images/SlabF.png 
 
 -----------------------------
 2.4. Cylinder
 -----------------------------
+
+An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** research reactor pin cell is presented here by using 7 energy groups
+
+    .. code-block:: json
+
+        { 
+          "data": { 
+            "parameter": { 
+              "id": 100,
+              "Total number of energy groups": 7,
+              "Total number of Materials": 5,
+              "Total number of regions": 5,
+              "Which material goes in each region": [1, 2, 3, 4, 5],
+              "Ray for each region per [cm]": [0.3175, 1.82769, 1.83150, 1.88230, 2.285814144],
+              "Number of fine meshes": [5, 5, 5, 5, 5],
+              "Number of Angular Discretization": 0,
+              "The l-order Legendre polonomial": 0,
+              "Maximum Iteration": 200,
+              "Epsilon Keff": 1.0e-8
+            }, 
+            "materials": [
+              { 
+                "id": 1, 
+                "nom": "material 1",
+                "XSTotal": [0.297551431, 0.288909664, 0.290306468, 0.286637159, 0.295583239, 0.326837471, 0.155639234],
+                "XSNuFission": [0, 0, 0, 0, 0, 0, 0],
+                "XSScatter Matrix":[[[0.269680893, 0.021221626, 0, 0, 0, 0, 0], 
+                                     [0.015676686, 0.263059691, 0.005057992, 0, 0, 0, 0], 
+                                     [0, 0.013507066, 0.273815991, 0.001186857, 0, 0, 0],
+                                     [0, 0, 0.014034288, 0.270365363, 0.002092507, 0, 0], 
+                                     [0, 0, 0, 0.00079017, 0.292969338, 0,  0], 
+                                     [0, 0, 0, 0, 0.001078437, 0.32539832 , 0], 
+                                     [0, 0, 0, 0, 0.000007539, 0.011162732, 0.14376993]]],
+                "XSChi":  [0, 0, 0, 0, 0, 0, 0]
+              },
+              { 
+                "id": 2, 
+                "nom": "material 2",
+                "XSTotal": [2.994544,  1.408450959, 0.817921932, 0.633026483, 0.650866502, 0.515434679, 0.243844582],
+                "XSNuFission": [0.362087986, 0.179080763, 0.09568437, 0.03889374, 0.013653221, 0.001011529, 0.00163296],
+                "XSScatter Matrix":[[[2.739733851, 0.036287563, 0.014790886, 0, 0, 0, 0],
+                                           [0.038125613, 1.255653823, 0.014136713, 0, 0, 0, 0], 
+                                           [0.166974328, 0.274556127, 0.320581789, 0.00109001, 0, 0, 0], 
+                                           [0.036264407, 0.11429219, 0.651920757, -0.19634513, 0.001532029, 0, 0], 
+                                           [0.003270334, 0.00846593, 0.051970962, 0.052892578, 0.512276254, 0, 0],
+                                           [0.000000452, 0.000001176, 0.000010132, 0.000008685, 0.162129535, 0.352055605, 0], 
+                                           [0, 0, 0.000000177, 0.000000059, 0.001637495, 0.098331459, 0.142495556]]],
+                "XSChi":  [0, 0, 0, 0, 0.000390, 0.126214, 0.872105]
+              },
+              { 
+                "id": 3, 
+                "nom": "material 3",
+                "XSTotal": [0, 0, 0, 0, 0, 0, 0],
+                "XSNuFission": [0, 0, 0, 0, 0, 0, 0],
+                "XSScatter Matrix":[[[0, 0, 0, 0, 0, 0, 0],
+                                     [0, 0, 0, 0, 0, 0, 0],
+                                     [0, 0, 0, 0, 0, 0, 0],
+                                     [0, 0, 0, 0, 0, 0, 0], 
+                                     [0, 0, 0, 0, 0, 0, 0],
+                                     [0, 0, 0, 0, 0, 0, 0],
+                                     [0, 0, 0, 0, 0, 0, 0]]],
+                "XSChi":  [0, 0, 0, 0, 0, 0, 0]
+              },
+              { 
+                "id": 4, 
+                "nom": "material 4",
+                "XSTotal": [1.153239138, 1.012997908, 0.947913799, 0.908546838, 0.966825787, 0.46508365, 0.201018163],
+                "XSNuFission": [0, 0, 0, 0, 0, 0, 0],
+                "XSScatter Matrix":[[[0.810739629, 0.066072482, 0, 0, 0, 0, 0], 
+                                     [0.070201393, 0.778857964, 0.018049333, 0, 0, 0, 0], 
+                                     [0.000005432, 0.055959691, 0.806723946, 0.003927282, 0, 0, 0],
+                                     [0, 0, 0.061596098, 0.790102323, 0.005981459, 0, 0],
+                                     [0, 0, 0, 0.003658891, 0.950937049, 0 , 0], 
+                                     [0, 0, 0, 0, 0.005035727, 0.459136241, 0], 
+                                     [0, 0, 0, 0, 0.000075732, 0.014066679, 0.185277698]]],
+                "XSChi":  [0, 0, 0, 0, 0, 0, 0]
+              },
+              { 
+                "id": 5, 
+                "nom": "material 5",
+                "XSTotal": [3.102999797, 1.73516897, 0.980823407, 0.642418097, 0.567747919, 0.419879925, 0.201975672],
+                "XSNuFission": [0, 0, 0, 0, 0, 0, 0],
+                "XSScatter Matrix":[[[2.631785406, 0.437581882, 0.00907283, 0, 0, 0, 0],
+                                     [0.609582022, 1.041127377, 0.071965385, 0, 0, 0, 0],
+                                     [0.141504305, 0.538385484, 0.292249692, 0.002089256, 0, 0, 0], 
+                                     [0.036338638, 0.123430676, 0.814518036, -0.336757332, 0.001951418, 0, 0], 
+                                     [0.003425563, 0.009933065, 0.061937554, 0.066020159, 0.425993565, 0, 0], 
+                                     [0.000000363, 0.000001996, 0.000009253, 0.00000889,  0.203705679, 0.216356046, 0], 
+                                     [0, 0, 0.000000253, 0, 0.001995558, 0.110723501, 0.089154896]]],
+                "XSChi":  [0, 0, 0, 0, 0, 0, 0]
+              }
+            ]  
+          }  
+        }
+
+Geometry in a two-dimensional TRIGA Reactor 
+
+.. image:: _images/TrigaG.png 
+
+The infinite cell in OpenMC `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in `OpenRSN <https://openrsn.readthedocs.io/en/latest/index.html>`_ and `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ are shown in Table below.
+
+.. table:: Calculate infinite multiplication factor :math:`k_{inf}`.
+
+    +----------------------+---------------+
+    | Surface              |:math:`k_{inf}`|
+    +======================+===============+
+    | OpenRSN              | 1.403180      |
+    |                      |               |
+    +----------------------+---------------+
+    |                      |               |
+    | OoenMC               | 1.417226      |
+    +----------------------+---------------+
 
 -----------------------------
 2.5. Sphere
