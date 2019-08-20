@@ -2,23 +2,24 @@
 
 In this project we develop a package OpenRSN  to solve a neutron transport equation.
 
-[**Project Description**](xxxxxxxxxxxxxxxxx)
+[**Project Description**](https://openrsn.readthedocs.io/en/latest/index.html)
 
-[**Project Presentation**](xxxxxxxxxxxxxxxx)
+[**Project Presentation**](https://openrsn.readthedocs.io/en/latest/index.html)
 
-[**Installation Instruction**](xxxxxxxxxxxxxxxx)
+[**Installation Instruction**](https://openrsn.readthedocs.io/en/latest/Installation.html)
 
-[**Documentation**](xxxxxxxxxxxxxxxxxxxx)
+[**Documentation**](https://openrsn.readthedocs.io/en/latest/index.html)
 
-[**Video Demo**](xxxxxxxxxxxxxxxxx)
+[**Video Demo**](https://openrsn.readthedocs.io/en/latest/index.html)
 
 Dependencies:
 * numpy (>=1.16)
 * matplotlib (>=3.0.3)
 
-## Author
+## Authors
 
 * Mohamed LAHDOUR
+* Tarek El Bardouni
 
 
 

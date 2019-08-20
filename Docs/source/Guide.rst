@@ -94,7 +94,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
         }
 
 2.2.2. Generating JSON Input File
--------------------------------
+---------------------------------
 
 Another method is to use a set of buttons on the left side of the main
 window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Data Up** button the input JSON file will be automatically generated in the window **Text editor** .
@@ -104,6 +104,8 @@ window [ref], these buttons allow users to insert input data automatically witho
 
 2.2.3. Running OpenRSN under a GUI
 ----------------------------------
+
+The **Run** button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.
 
 .. image:: _images/runing.png
 
@@ -117,9 +119,13 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 2.2.5. Flux Visualization
 ------------------------
 
+The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File`_  with four regions and four materials after clicking on the **Plot** button.
+
 .. image:: _images/flux.png 
 2.2.6. Level symmetric gaussian quadrature sets visualization
-------------------------------------------------------
+-------------------------------------------------------------
+
+The level-symmetric quadrature set is used in the Discrete Ordinates (SN) method (Lewis and Miller, 1984). The subscript N refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
 .. image:: _images/ordin.png 
 
