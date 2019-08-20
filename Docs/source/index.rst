@@ -8,7 +8,13 @@ Documentation: OpenRSN
 
 Neutron Transport Package with GUI
 
-Neutron Transport Package OpenRSN (Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation. The code with its GUI is developed and maintained by Mohamed Lahdour (PhD student) and Prof. Tarek El Bardouni from University Abdelmalek Essaadi, Tetouan, Morocco.
+Neutron Transport Package **OpenRSN** (Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation using either.
+
+- Collision Probablity Method (CP) in One-Dimensional for Slab, Cylindrical or Spherical geoemtry.
+- Discrete Ordinate Method (:math:`S_{N}`) in One or Two-Dimensional for Cartesian Geometry .
+- Method of Characteristics (MOC) in One-Dimensional for Slab Geometry.
+
+The code with its GUI is developed and maintained by `Mohamed LAHDOUR <https://github.com/mohamedlahdour>`_ (PhD student) and Prof. `Tarek EL BARDOUNI  <https://github.com/tarekbardouni>`_ from `University Abdelmalek Essaadi Tetouan Morocco <http://www.fst.ac.ma/site/>`_ .
 
 
 
