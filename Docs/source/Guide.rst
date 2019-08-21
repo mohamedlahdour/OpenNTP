@@ -117,7 +117,7 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 .. image:: _images/geom.png 
 
 2.2.5. Flux Visualization
-------------------------
+-------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File`_  with four regions and four materials after clicking on the **Plot** button.
 
@@ -128,6 +128,110 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 The level-symmetric quadrature set is used in the Discrete Ordinates (:math:`S_{N}`) method (Lewis and Miller, 1984). The subscript :math:`N`.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
 .. image:: _images/ordin.png 
+
+2.2.7. Simple Output
+--------------------
+
+The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport eqaution.
+  
+    .. code-block:: python
+
+        ********************************************************************************
+        ERSN, UNIVERSITY ABDELMALEK ESSAADI FACULTY OF SCIENCES - TETOUAN, MOROCCO
+        CODE  DEVELOPED  BY  MOHAMED  LAHDOUR,  PHD  STUDENT
+        OpenRSN:         SN  DISCRETE  ORDINATES  METHOD
+        DIMENSION:       TWO DIMENSIONS (2D) 
+        GEOMETRY:        CARTESIAN
+        VERSION NUMBER:  1.2
+        VERSION DATE:    20  August  2019
+        RAN ON:          2019-08-21 12:45:19.93   (H:M:S)
+        ********************************************************************************
+                    ----------------------------------------------------------
+                              INPUT  PARAMETER - VALUES  FROM  INPUT
+                    ----------------------------------------------------------
+ 
+        ENERGY GROUPS NUMBER:                               1
+        X REGIONS NUMBER:                                   4
+        Y REGIONS NUMBER:                                   4
+        MATERIALS NUMBER:                                   4
+        SIZE OF EACH X REGION [CM]:          35.00000  10.00000  20.00000  40.00000
+        SIZE OF EACH Y REGION [CM]:          35.00000  10.00000  20.00000  40.00000
+        NUMBER OF DIRECTION ALONG EACH AXIS:                8
+        ORDER LEGENDRE POLYNOMIAL:                          0
+        TOTAL NUMBER OF X FINE MESHES:                      8
+        TOTAL NUMBER OF Y FINE MESHES:                      8
+        CONVERGENCE CRITERION of KEFF AND FLUX:       1.0E-08
+ 
+                    ----------------------------------------------------------
+                              CALCULATION  RUN-TIME  PARAMETERS  SN
+                    ----------------------------------------------------------
+ 
+        LEVEL  SYMMETRIC  GAUSSIAN  QUADRATURE  SETS: 
+ 
+        N. ORDER          MU             ETA             PSI         WEIGHTS 
+ 
+           1          9.51190E-01     2.18218E-01     2.18218E-01     1.20988E-01
+           2          7.86796E-01     2.18218E-01     5.77350E-01     9.07407E-02
+           3          7.86796E-01     5.77350E-01     2.18218E-01     9.07407E-02
+           4          5.77350E-01     2.18218E-01     7.86796E-01     9.07407E-02
+           5          5.77350E-01     5.77350E-01     5.77350E-01     9.25926E-02
+           6          5.77350E-01     7.86796E-01     2.18218E-01     9.07407E-02
+           7          2.18218E-01     2.18218E-01     9.51190E-01     1.20988E-01
+           8          2.18218E-01     5.77350E-01     7.86796E-01     9.07407E-02
+           9          2.18218E-01     7.86796E-01     5.77350E-01     9.07407E-02
+          10          2.18218E-01     9.51190E-01     2.18218E-01     1.20988E-01
+ 
+        PSEUDO  CROSS  SECTIONS  DATA: 
+ 
+         MATERIAL :   1
+ 
+         GROUP           TOTAL        ABSORPTION      NU*FISSION      SCATTERING      FISSION SPECTRUM
+ 
+           1          2.22589E-01     2.02600E-03     2.83283E-03     2.20563E-01     1.00000E+00
+         MATERIAL :   2
+ 
+         GROUP           TOTAL        ABSORPTION      NU*FISSION      SCATTERING      FISSION SPECTRUM
+ 
+           1          2.16566E-01     5.86900E-03     1.04347E-02     2.10697E-01     1.00000E+00
+         MATERIAL :   3
+ 
+         GROUP           TOTAL        ABSORPTION      NU*FISSION      SCATTERING      FISSION SPECTRUM
+ 
+           1          3.01439E-01     5.37000E-03     5.13036E-04     2.96069E-01     1.00000E+00
+         MATERIAL :   4
+ 
+         GROUP           TOTAL        ABSORPTION      NU*FISSION      SCATTERING      FISSION SPECTRUM
+ 
+           1          2.52250E-01     1.45600E-03     0.00000E+00     2.50794E-01     0.00000E+00
+ 
+                    ----------------------------------------------------------
+                                NORMALIZED SCALAR  FLUX  SOLUTION
+                    ----------------------------------------------------------
+ 
+        FLUXES  PER  MESH  PER  ENERGY  GROUP:
+ 
+        M E S H       G R O U P 1
+ 
+                     1            2            3            4            5            6            7            8
+            1   1.00000E+00  8.99018E-01  7.96162E-01  6.93054E-01  4.64773E-01  2.39120E-01  1.17909E-01  3.51124E-02
+            2   9.01165E-01  7.97144E-01  6.94076E-01  5.98010E-01  3.94987E-01  2.00672E-01  1.00336E-01  3.05219E-02
+            3   7.99305E-01  6.95147E-01  5.78156E-01  4.86665E-01  3.19286E-01  1.62066E-01  8.34442E-02  2.61713E-02
+            4   6.95459E-01  5.98931E-01  4.86670E-01  4.05703E-01  2.69057E-01  1.41666E-01  7.46702E-02  2.40013E-02
+            5   4.66602E-01  3.95815E-01  3.19399E-01  2.69137E-01  1.90544E-01  1.12075E-01  6.16261E-02  2.09120E-02
+            6   2.40387E-01  2.01169E-01  1.62285E-01  1.41879E-01  1.12114E-01  7.75854E-02  4.62275E-02  1.64931E-02
+            7   1.18727E-01  1.00733E-01  8.35693E-02  7.48131E-02  6.17163E-02  4.62580E-02  2.92000E-02  1.04020E-02
+            8   3.53836E-02  3.06810E-02  2.62660E-02  2.40611E-02  2.09463E-02  1.65158E-02  1.04078E-02  3.69251E-03
+ 
+                    ----------------------------------------------------------
+                      OUTPUT  PARAMETER - SOLUTION  TO  TRANSPORT  EQUATION
+                    ----------------------------------------------------------
+ 
+        K-EFF                    =      0.968367
+        N. OUTER ITERATIONS      =          7331
+        TOTAL INNER ITERATIONS   =            15
+        TOTAL EXECUTION TIME     =    0:00:01.65   (H:M:S)
+ 
+        ********************************************************************************
 
 -----------------------------
 2.3. Slab

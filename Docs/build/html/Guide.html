@@ -98,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#geometry-visualization">2.2.4. Geometry Visualization</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#flux-visualization">2.2.5. Flux Visualization</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#level-symmetric-gaussian-quadrature-sets-visualization">2.2.6. Level symmetric gaussian quadrature sets visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-output">2.2.7. Simple Output</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#slab">2.3. Slab</a></li>
@@ -288,6 +289,110 @@ window [ref], these buttons allow users to insert input data automatically witho
 <h4>2.2.6. Level symmetric gaussian quadrature sets visualization<a class="headerlink" href="#level-symmetric-gaussian-quadrature-sets-visualization" title="Permalink to this headline">¶</a></h4>
 <p>The level-symmetric quadrature set is used in the Discrete Ordinates (<span class="math notranslate nohighlight">\(S_{N}\)</span>) method (Lewis and Miller, 1984). The subscript <span class="math notranslate nohighlight">\(N\)</span>.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the <strong>Ordinate</strong> button</p>
 <img alt="_images/ordin.png" src="_images/ordin.png" />
+</div>
+<div class="section" id="simple-output">
+<h4>2.2.7. Simple Output<a class="headerlink" href="#simple-output" title="Permalink to this headline">¶</a></h4>
+<p>The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport eqaution.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">********************************************************************************</span>
+<span class="n">ERSN</span><span class="p">,</span> <span class="n">UNIVERSITY</span> <span class="n">ABDELMALEK</span> <span class="n">ESSAADI</span> <span class="n">FACULTY</span> <span class="n">OF</span> <span class="n">SCIENCES</span> <span class="o">-</span> <span class="n">TETOUAN</span><span class="p">,</span> <span class="n">MOROCCO</span>
+<span class="n">CODE</span>  <span class="n">DEVELOPED</span>  <span class="n">BY</span>  <span class="n">MOHAMED</span>  <span class="n">LAHDOUR</span><span class="p">,</span>  <span class="n">PHD</span>  <span class="n">STUDENT</span>
+<span class="n">OpenRSN</span><span class="p">:</span>         <span class="n">SN</span>  <span class="n">DISCRETE</span>  <span class="n">ORDINATES</span>  <span class="n">METHOD</span>
+<span class="n">DIMENSION</span><span class="p">:</span>       <span class="n">TWO</span> <span class="n">DIMENSIONS</span> <span class="p">(</span><span class="mi">2</span><span class="n">D</span><span class="p">)</span>
+<span class="n">GEOMETRY</span><span class="p">:</span>        <span class="n">CARTESIAN</span>
+<span class="n">VERSION</span> <span class="n">NUMBER</span><span class="p">:</span>  <span class="mf">1.2</span>
+<span class="n">VERSION</span> <span class="n">DATE</span><span class="p">:</span>    <span class="mi">20</span>  <span class="n">August</span>  <span class="mi">2019</span>
+<span class="n">RAN</span> <span class="n">ON</span><span class="p">:</span>          <span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">21</span> <span class="mi">12</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mf">19.93</span>   <span class="p">(</span><span class="n">H</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">S</span><span class="p">)</span>
+<span class="o">********************************************************************************</span>
+            <span class="o">----------------------------------------------------------</span>
+                      <span class="n">INPUT</span>  <span class="n">PARAMETER</span> <span class="o">-</span> <span class="n">VALUES</span>  <span class="n">FROM</span>  <span class="n">INPUT</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">ENERGY</span> <span class="n">GROUPS</span> <span class="n">NUMBER</span><span class="p">:</span>                               <span class="mi">1</span>
+<span class="n">X</span> <span class="n">REGIONS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">Y</span> <span class="n">REGIONS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">MATERIALS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">SIZE</span> <span class="n">OF</span> <span class="n">EACH</span> <span class="n">X</span> <span class="n">REGION</span> <span class="p">[</span><span class="n">CM</span><span class="p">]:</span>          <span class="mf">35.00000</span>  <span class="mf">10.00000</span>  <span class="mf">20.00000</span>  <span class="mf">40.00000</span>
+<span class="n">SIZE</span> <span class="n">OF</span> <span class="n">EACH</span> <span class="n">Y</span> <span class="n">REGION</span> <span class="p">[</span><span class="n">CM</span><span class="p">]:</span>          <span class="mf">35.00000</span>  <span class="mf">10.00000</span>  <span class="mf">20.00000</span>  <span class="mf">40.00000</span>
+<span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">DIRECTION</span> <span class="n">ALONG</span> <span class="n">EACH</span> <span class="n">AXIS</span><span class="p">:</span>                <span class="mi">8</span>
+<span class="n">ORDER</span> <span class="n">LEGENDRE</span> <span class="n">POLYNOMIAL</span><span class="p">:</span>                          <span class="mi">0</span>
+<span class="n">TOTAL</span> <span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">X</span> <span class="n">FINE</span> <span class="n">MESHES</span><span class="p">:</span>                      <span class="mi">8</span>
+<span class="n">TOTAL</span> <span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">Y</span> <span class="n">FINE</span> <span class="n">MESHES</span><span class="p">:</span>                      <span class="mi">8</span>
+<span class="n">CONVERGENCE</span> <span class="n">CRITERION</span> <span class="n">of</span> <span class="n">KEFF</span> <span class="n">AND</span> <span class="n">FLUX</span><span class="p">:</span>       <span class="mf">1.0E-08</span>
+
+            <span class="o">----------------------------------------------------------</span>
+                      <span class="n">CALCULATION</span>  <span class="n">RUN</span><span class="o">-</span><span class="n">TIME</span>  <span class="n">PARAMETERS</span>  <span class="n">SN</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">LEVEL</span>  <span class="n">SYMMETRIC</span>  <span class="n">GAUSSIAN</span>  <span class="n">QUADRATURE</span>  <span class="n">SETS</span><span class="p">:</span>
+
+<span class="n">N</span><span class="o">.</span> <span class="n">ORDER</span>          <span class="n">MU</span>             <span class="n">ETA</span>             <span class="n">PSI</span>         <span class="n">WEIGHTS</span>
+
+   <span class="mi">1</span>          <span class="mf">9.51190E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">1.20988E-01</span>
+   <span class="mi">2</span>          <span class="mf">7.86796E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">3</span>          <span class="mf">7.86796E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">4</span>          <span class="mf">5.77350E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">5</span>          <span class="mf">5.77350E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.25926E-02</span>
+   <span class="mi">6</span>          <span class="mf">5.77350E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">7</span>          <span class="mf">2.18218E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.51190E-01</span>     <span class="mf">1.20988E-01</span>
+   <span class="mi">8</span>          <span class="mf">2.18218E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">9</span>          <span class="mf">2.18218E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.07407E-02</span>
+  <span class="mi">10</span>          <span class="mf">2.18218E-01</span>     <span class="mf">9.51190E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">1.20988E-01</span>
+
+<span class="n">PSEUDO</span>  <span class="n">CROSS</span>  <span class="n">SECTIONS</span>  <span class="n">DATA</span><span class="p">:</span>
+
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">1</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.22589E-01</span>     <span class="mf">2.02600E-03</span>     <span class="mf">2.83283E-03</span>     <span class="mf">2.20563E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">2</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.16566E-01</span>     <span class="mf">5.86900E-03</span>     <span class="mf">1.04347E-02</span>     <span class="mf">2.10697E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">3</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">3.01439E-01</span>     <span class="mf">5.37000E-03</span>     <span class="mf">5.13036E-04</span>     <span class="mf">2.96069E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">4</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.52250E-01</span>     <span class="mf">1.45600E-03</span>     <span class="mf">0.00000E+00</span>     <span class="mf">2.50794E-01</span>     <span class="mf">0.00000E+00</span>
+
+            <span class="o">----------------------------------------------------------</span>
+                        <span class="n">NORMALIZED</span> <span class="n">SCALAR</span>  <span class="n">FLUX</span>  <span class="n">SOLUTION</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">FLUXES</span>  <span class="n">PER</span>  <span class="n">MESH</span>  <span class="n">PER</span>  <span class="n">ENERGY</span>  <span class="n">GROUP</span><span class="p">:</span>
+
+<span class="n">M</span> <span class="n">E</span> <span class="n">S</span> <span class="n">H</span>       <span class="n">G</span> <span class="n">R</span> <span class="n">O</span> <span class="n">U</span> <span class="n">P</span> <span class="mi">1</span>
+
+             <span class="mi">1</span>            <span class="mi">2</span>            <span class="mi">3</span>            <span class="mi">4</span>            <span class="mi">5</span>            <span class="mi">6</span>            <span class="mi">7</span>            <span class="mi">8</span>
+    <span class="mi">1</span>   <span class="mf">1.00000E+00</span>  <span class="mf">8.99018E-01</span>  <span class="mf">7.96162E-01</span>  <span class="mf">6.93054E-01</span>  <span class="mf">4.64773E-01</span>  <span class="mf">2.39120E-01</span>  <span class="mf">1.17909E-01</span>  <span class="mf">3.51124E-02</span>
+    <span class="mi">2</span>   <span class="mf">9.01165E-01</span>  <span class="mf">7.97144E-01</span>  <span class="mf">6.94076E-01</span>  <span class="mf">5.98010E-01</span>  <span class="mf">3.94987E-01</span>  <span class="mf">2.00672E-01</span>  <span class="mf">1.00336E-01</span>  <span class="mf">3.05219E-02</span>
+    <span class="mi">3</span>   <span class="mf">7.99305E-01</span>  <span class="mf">6.95147E-01</span>  <span class="mf">5.78156E-01</span>  <span class="mf">4.86665E-01</span>  <span class="mf">3.19286E-01</span>  <span class="mf">1.62066E-01</span>  <span class="mf">8.34442E-02</span>  <span class="mf">2.61713E-02</span>
+    <span class="mi">4</span>   <span class="mf">6.95459E-01</span>  <span class="mf">5.98931E-01</span>  <span class="mf">4.86670E-01</span>  <span class="mf">4.05703E-01</span>  <span class="mf">2.69057E-01</span>  <span class="mf">1.41666E-01</span>  <span class="mf">7.46702E-02</span>  <span class="mf">2.40013E-02</span>
+    <span class="mi">5</span>   <span class="mf">4.66602E-01</span>  <span class="mf">3.95815E-01</span>  <span class="mf">3.19399E-01</span>  <span class="mf">2.69137E-01</span>  <span class="mf">1.90544E-01</span>  <span class="mf">1.12075E-01</span>  <span class="mf">6.16261E-02</span>  <span class="mf">2.09120E-02</span>
+    <span class="mi">6</span>   <span class="mf">2.40387E-01</span>  <span class="mf">2.01169E-01</span>  <span class="mf">1.62285E-01</span>  <span class="mf">1.41879E-01</span>  <span class="mf">1.12114E-01</span>  <span class="mf">7.75854E-02</span>  <span class="mf">4.62275E-02</span>  <span class="mf">1.64931E-02</span>
+    <span class="mi">7</span>   <span class="mf">1.18727E-01</span>  <span class="mf">1.00733E-01</span>  <span class="mf">8.35693E-02</span>  <span class="mf">7.48131E-02</span>  <span class="mf">6.17163E-02</span>  <span class="mf">4.62580E-02</span>  <span class="mf">2.92000E-02</span>  <span class="mf">1.04020E-02</span>
+    <span class="mi">8</span>   <span class="mf">3.53836E-02</span>  <span class="mf">3.06810E-02</span>  <span class="mf">2.62660E-02</span>  <span class="mf">2.40611E-02</span>  <span class="mf">2.09463E-02</span>  <span class="mf">1.65158E-02</span>  <span class="mf">1.04078E-02</span>  <span class="mf">3.69251E-03</span>
+
+            <span class="o">----------------------------------------------------------</span>
+              <span class="n">OUTPUT</span>  <span class="n">PARAMETER</span> <span class="o">-</span> <span class="n">SOLUTION</span>  <span class="n">TO</span>  <span class="n">TRANSPORT</span>  <span class="n">EQUATION</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">K</span><span class="o">-</span><span class="n">EFF</span>                    <span class="o">=</span>      <span class="mf">0.968367</span>
+<span class="n">N</span><span class="o">.</span> <span class="n">OUTER</span> <span class="n">ITERATIONS</span>      <span class="o">=</span>          <span class="mi">7331</span>
+<span class="n">TOTAL</span> <span class="n">INNER</span> <span class="n">ITERATIONS</span>   <span class="o">=</span>            <span class="mi">15</span>
+<span class="n">TOTAL</span> <span class="n">EXECUTION</span> <span class="n">TIME</span>     <span class="o">=</span>    <span class="mi">0</span><span class="p">:</span><span class="mo">00</span><span class="p">:</span><span class="mf">01.65</span>   <span class="p">(</span><span class="n">H</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">S</span><span class="p">)</span>
+
+<span class="o">********************************************************************************</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="slab">
