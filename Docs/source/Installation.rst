@@ -17,7 +17,7 @@ Installing on Linux
 
         sudo apt install python-pip
         sudo apt-get install python-numpy
-        pip3 install numpy matplotlib
+        pip install numpy matplotlib
 
 3. You need to install PyQt5 on Ubuntu with python to run the GUI:
     .. code-block:: python

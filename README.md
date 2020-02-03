@@ -1,8 +1,8 @@
-# Neutron Transport Package OpenRSN 
+# Neutron Transport Package OpenNTP
 
-In this project we develop a package OpenRSN  to solve a neutron transport equation.
+In this project we develop a package OpenNTP to solve a neutron transport equation.
 
-Neutron Transport Package OpenRSN (Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation using either:
+Neutron Transport Package OpenNTP(Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation using either:
 
 * Collision Probablity Method (CP) in One-Dimensional for Slab, Cylindrical or Spherical geoemtry.
 * Discrete Ordinate Method (SN) in One or Two-Dimensional for Cartesian Geometry.
@@ -18,7 +18,7 @@ This directory contains two folders Docs (documentation) and src (the program so
 
         cd OpenRSN/src/app/sources
 
-This directory contains OpenRSN source files written in FORTRAN90 such as:
+This directory contains OpenNTPsource files written in FORTRAN90 such as:
 * TRANSPORT_1D_CP.F90 (for the pollision probablity method in One-Dimensional),
 * TRANSPORT_1D_SN.F90 (for the discrete ordinate method in One-Dimensional),
 * TRANSPORT_1D_MOC.F90 (for the method of characteristics in One-Dimensional) and
@@ -36,7 +36,7 @@ This directory contains the python files for Graphical User Interface (GUI)
 Quick Install Guide
 =============
 
-This quick install guide outlines the basic steps needed to install OpenRSN on your computer.
+This quick install guide outlines the basic steps needed to install OpenNTPon your computer.
 
 Installing on Linux
 -------------------
@@ -64,14 +64,14 @@ Installing on Linux
         sudo apt-get install pyqt5-dev-tools
         sudo apt-get install qttools5-dev-tools
 
-5. Install the OpenRSN package
+5. Install the OpenNTPpackage
 
         git clone  https://github.com/mohamedlahdour/OpenRSN.git
 
 6. Import the *OpenRSN* and run the package in the following way:
 
          cd OpenRSN
-         $ python3 main.py
+         $ python main.py
 
 User's Guide
 ============
@@ -83,9 +83,9 @@ A graphical user interface written in Python programing language has been develo
 After starting the software by typing the following command line in a terminal:
 
          cd OpenRSN
-         $ python3 main.py
+         $ python main.py
 
-A main window (GUI) of the package OpenRSN on an Ubuntu Linux machine will be displayed as in Figure bellow.
+A main window (GUI) of the package OpenNTPon an Ubuntu Linux machine will be displayed as in Figure bellow.
 
 ![Image 0](https://github.com/mohamedlahdour/OpenRSN/blob/master/Docs/source/_images/main.png)
 
@@ -172,7 +172,7 @@ window [ref], these buttons allow users to insert input data automatically witho
 
 ![Image 1](https://github.com/mohamedlahdour/OpenRSN/blob/master/Docs/source/_images/insert.png)
 
-2.2.3. Running OpenRSN under a GUI
+2.2.3. Running OpenNTPunder a GUI
 ----------------------------------
 
 The **Run** button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.
@@ -462,7 +462,7 @@ The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is repre
     +----------------------+------------------+
     | Surface              |        kinf      |
     +======================+==================+
-    | OpenRSN              |    1.403180      |
+    | OpenNTP             |    1.403180      |
     |                      |                  |
     +----------------------+------------------+
     |                      |                  |
