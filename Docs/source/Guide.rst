@@ -363,13 +363,23 @@ To facilitate the creation of a new OpenNTP input file, a set of dialog boxes ha
 
 .. image:: _images/photo3.png 
 
+- Insertion of total multi-group macroscopic cross section data.
+
 .. image:: _images/insert2.png 
+
+- Insertion of fission  multi-group macroscopic cross section data
 
 .. image:: _images/photo5.png 
 
+- Insertion of nu-fission  multi-group macroscopic cross section data.
+
 .. image:: _images/photo6.png 
 
+- Insertion of scatternig matrix multi-group macroscopic cross section data
+
 .. image:: _images/photo7.png 
+
+- Insertion of fission spectrum data.
 
 .. image:: _images/photo8.png 
 
