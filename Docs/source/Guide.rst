@@ -348,7 +348,11 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
 2.2.2. Generating JSON Input File
 ---------------------------------
 
-To facilitate the creation of a new OpenNTP input file, a set of dialog boxes have been developed (Below) which allows users to create the OpenNTP input file in a simpler, faster and interactive. Users can fill in all the information on this OpenNTP file (including: number of group energy, materials, Pin cells, assemblies, type of geometry, multi-group cross sections ...) and once they have specified input files in JSON format will be automatically created in the window **Text editor** by clicking on button **Generate Input file**
+To facilitate the creation of a new OpenNTP input file, a set of dialog boxes have been developed (Below) which allows users to create the OpenNTP input file in a simpler, faster and interactive. Users can fill up all information about the OpenNTP input file (including: number of group energy, materials, Pin cells, assemblies, type of geometry, multi-group cross sections ...) and once they have specified input files in JSON format will be automatically created in the window **Text editor** by clicking on button **Generate Input file**.
+
+. Definition of Pin Cells by introducing the coarse meshes size along the x and y-axis,
+  then the material index and the number of fine mesh in each coarse meshes.
+
 
 .. image:: _images/insert.png 
 
