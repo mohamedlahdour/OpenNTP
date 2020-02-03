@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User’s Guide &mdash; OpenRSN 1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="License.html" />
+    <link rel="prev" title="Theory and Methodogy" href="Theory.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> OpenRSN
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Quick Install Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Theory.html">Theory and Methodogy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User’s Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graphical-user-interface">1. Graphical User Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-test-suite">2. Examples &amp; test suite</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#two-dimensional-benchmark">2.2. Two-dimensional benchmark</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-json-input-file">2.2.1. Creating JSON Input File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generating-json-input-file">2.2.2. Generating JSON Input File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#running-openrsn-under-a-gui">2.2.3. Running OpenRSN under a GUI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#geometry-visualization">2.2.4. Geometry Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#flux-visualization">2.2.5. Flux Visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#level-symmetric-gaussian-quadrature-sets-visualization">2.2.6. Level symmetric gaussian quadrature sets visualization</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-output">2.2.7. Simple Output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#slab">2.3. Slab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cylinder">2.4. Cylinder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sphere">2.5. Sphere</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pin-cell">2.6. Pin Cell</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="License.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="developers.html">Development Team</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenRSN</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>User’s Guide</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-s-guide">
+<h1>User’s Guide<a class="headerlink" href="#user-s-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="graphical-user-interface">
+<h2>1. Graphical User Interface<a class="headerlink" href="#graphical-user-interface" title="Permalink to this headline">¶</a></h2>
+<p>A graphical user interface written in Python programing language has been developed to simplify the use of package OpenRSN.
+After starting the software by typing the following command line in a terminal:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span>cd OpenRSN
+$ python3 main.py
+</pre></div>
+</div>
+</div></blockquote>
+<p>A main window (GUI) of the package OpenRSN on an Ubuntu Linux machine will be displayed as in Figure bellow.</p>
+<img alt="_images/main.png" src="_images/main.png" />
+</div>
+<div class="section" id="examples-test-suite">
+<h2>2. Examples &amp; test suite<a class="headerlink" href="#examples-test-suite" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="two-dimensional-benchmark">
+<h3>2.2. Two-dimensional benchmark<a class="headerlink" href="#two-dimensional-benchmark" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="creating-json-input-file">
+<h4>2.2.1. Creating JSON Input File<a class="headerlink" href="#creating-json-input-file" title="Permalink to this headline">¶</a></h4>
+<p>The input data file must be in JSON format. The first method is
+to write it directly in <strong>Text editor</strong>  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from <a class="reference external" href="https://doi.org/10.1016/S0168-9274(01)00074-5">[Filho et al.,2002].</a></p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of X regions&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Y regions&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+      <span class="nt">&quot;X region thickness per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+      <span class="nt">&quot;Y region thickness per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">35</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+      <span class="nt">&quot;Which material goes in each cell&quot;</span><span class="p">:[[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+                                          <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]],</span>
+      <span class="nt">&quot;XY number of fine meshes in each cell&quot;</span><span class="p">:[[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+                                               <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">]],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1.0e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.222589</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.00283283</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.220563</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.216566</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0104347</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.210697</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.301439</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.000513036</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.296069</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.252250</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[</span><span class="mf">0.250794</span><span class="p">]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="generating-json-input-file">
+<h4>2.2.2. Generating JSON Input File<a class="headerlink" href="#generating-json-input-file" title="Permalink to this headline">¶</a></h4>
+<p>Another method is to use a set of buttons on the left side of the main
+window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on <strong>Data Up</strong> button the input JSON file will be automatically generated in the window <strong>Text editor</strong> .</p>
+<img alt="_images/insert.png" src="_images/insert.png" />
+</div>
+<div class="section" id="running-openrsn-under-a-gui">
+<h4>2.2.3. Running OpenRSN under a GUI<a class="headerlink" href="#running-openrsn-under-a-gui" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Run</strong> button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.</p>
+<img alt="_images/runing.png" src="_images/runing.png" />
+</div>
+<div class="section" id="geometry-visualization">
+<h4>2.2.4. Geometry Visualization<a class="headerlink" href="#geometry-visualization" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>geometry</strong> button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section <a href="#id3"><span class="problematic" id="id4">`Creating JSON Input File`_</span></a> is illustrated in Figure bellow</p>
+<img alt="_images/geom.png" src="_images/geom.png" />
+</div>
+<div class="section" id="flux-visualization">
+<h4>2.2.5. Flux Visualization<a class="headerlink" href="#flux-visualization" title="Permalink to this headline">¶</a></h4>
+<p>The <strong>Plot</strong> button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section <a href="#id5"><span class="problematic" id="id6">`Creating JSON Input File`_</span></a>  with four regions and four materials after clicking on the <strong>Plot</strong> button.</p>
+<img alt="_images/flux.png" src="_images/flux.png" />
+</div>
+<div class="section" id="level-symmetric-gaussian-quadrature-sets-visualization">
+<h4>2.2.6. Level symmetric gaussian quadrature sets visualization<a class="headerlink" href="#level-symmetric-gaussian-quadrature-sets-visualization" title="Permalink to this headline">¶</a></h4>
+<p>The level-symmetric quadrature set is used in the Discrete Ordinates (<span class="math notranslate nohighlight">\(S_{N}\)</span>) method (Lewis and Miller, 1984). The subscript <span class="math notranslate nohighlight">\(N\)</span>.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the <strong>Ordinate</strong> button</p>
+<img alt="_images/ordin.png" src="_images/ordin.png" />
+</div>
+<div class="section" id="simple-output">
+<h4>2.2.7. Simple Output<a class="headerlink" href="#simple-output" title="Permalink to this headline">¶</a></h4>
+<p>The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport eqaution.</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">********************************************************************************</span>
+<span class="n">ERSN</span><span class="p">,</span> <span class="n">UNIVERSITY</span> <span class="n">ABDELMALEK</span> <span class="n">ESSAADI</span> <span class="n">FACULTY</span> <span class="n">OF</span> <span class="n">SCIENCES</span> <span class="o">-</span> <span class="n">TETOUAN</span><span class="p">,</span> <span class="n">MOROCCO</span>
+<span class="n">CODE</span>  <span class="n">DEVELOPED</span>  <span class="n">BY</span>  <span class="n">MOHAMED</span>  <span class="n">LAHDOUR</span><span class="p">,</span>  <span class="n">PHD</span>  <span class="n">STUDENT</span>
+<span class="n">OpenRSN</span><span class="p">:</span>         <span class="n">SN</span>  <span class="n">DISCRETE</span>  <span class="n">ORDINATES</span>  <span class="n">METHOD</span>
+<span class="n">DIMENSION</span><span class="p">:</span>       <span class="n">TWO</span> <span class="n">DIMENSIONS</span> <span class="p">(</span><span class="mi">2</span><span class="n">D</span><span class="p">)</span>
+<span class="n">GEOMETRY</span><span class="p">:</span>        <span class="n">CARTESIAN</span>
+<span class="n">VERSION</span> <span class="n">NUMBER</span><span class="p">:</span>  <span class="mf">1.2</span>
+<span class="n">VERSION</span> <span class="n">DATE</span><span class="p">:</span>    <span class="mi">20</span>  <span class="n">August</span>  <span class="mi">2019</span>
+<span class="n">RAN</span> <span class="n">ON</span><span class="p">:</span>          <span class="mi">2019</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">21</span> <span class="mi">12</span><span class="p">:</span><span class="mi">45</span><span class="p">:</span><span class="mf">19.93</span>   <span class="p">(</span><span class="n">H</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">S</span><span class="p">)</span>
+<span class="o">********************************************************************************</span>
+            <span class="o">----------------------------------------------------------</span>
+                      <span class="n">INPUT</span>  <span class="n">PARAMETER</span> <span class="o">-</span> <span class="n">VALUES</span>  <span class="n">FROM</span>  <span class="n">INPUT</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">ENERGY</span> <span class="n">GROUPS</span> <span class="n">NUMBER</span><span class="p">:</span>                               <span class="mi">1</span>
+<span class="n">X</span> <span class="n">REGIONS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">Y</span> <span class="n">REGIONS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">MATERIALS</span> <span class="n">NUMBER</span><span class="p">:</span>                                   <span class="mi">4</span>
+<span class="n">SIZE</span> <span class="n">OF</span> <span class="n">EACH</span> <span class="n">X</span> <span class="n">REGION</span> <span class="p">[</span><span class="n">CM</span><span class="p">]:</span>          <span class="mf">35.00000</span>  <span class="mf">10.00000</span>  <span class="mf">20.00000</span>  <span class="mf">40.00000</span>
+<span class="n">SIZE</span> <span class="n">OF</span> <span class="n">EACH</span> <span class="n">Y</span> <span class="n">REGION</span> <span class="p">[</span><span class="n">CM</span><span class="p">]:</span>          <span class="mf">35.00000</span>  <span class="mf">10.00000</span>  <span class="mf">20.00000</span>  <span class="mf">40.00000</span>
+<span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">DIRECTION</span> <span class="n">ALONG</span> <span class="n">EACH</span> <span class="n">AXIS</span><span class="p">:</span>                <span class="mi">8</span>
+<span class="n">ORDER</span> <span class="n">LEGENDRE</span> <span class="n">POLYNOMIAL</span><span class="p">:</span>                          <span class="mi">0</span>
+<span class="n">TOTAL</span> <span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">X</span> <span class="n">FINE</span> <span class="n">MESHES</span><span class="p">:</span>                      <span class="mi">8</span>
+<span class="n">TOTAL</span> <span class="n">NUMBER</span> <span class="n">OF</span> <span class="n">Y</span> <span class="n">FINE</span> <span class="n">MESHES</span><span class="p">:</span>                      <span class="mi">8</span>
+<span class="n">CONVERGENCE</span> <span class="n">CRITERION</span> <span class="n">of</span> <span class="n">KEFF</span> <span class="n">AND</span> <span class="n">FLUX</span><span class="p">:</span>       <span class="mf">1.0E-08</span>
+
+            <span class="o">----------------------------------------------------------</span>
+                      <span class="n">CALCULATION</span>  <span class="n">RUN</span><span class="o">-</span><span class="n">TIME</span>  <span class="n">PARAMETERS</span>  <span class="n">SN</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">LEVEL</span>  <span class="n">SYMMETRIC</span>  <span class="n">GAUSSIAN</span>  <span class="n">QUADRATURE</span>  <span class="n">SETS</span><span class="p">:</span>
+
+<span class="n">N</span><span class="o">.</span> <span class="n">ORDER</span>          <span class="n">MU</span>             <span class="n">ETA</span>             <span class="n">PSI</span>         <span class="n">WEIGHTS</span>
+
+   <span class="mi">1</span>          <span class="mf">9.51190E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">1.20988E-01</span>
+   <span class="mi">2</span>          <span class="mf">7.86796E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">3</span>          <span class="mf">7.86796E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">4</span>          <span class="mf">5.77350E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">5</span>          <span class="mf">5.77350E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.25926E-02</span>
+   <span class="mi">6</span>          <span class="mf">5.77350E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">7</span>          <span class="mf">2.18218E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">9.51190E-01</span>     <span class="mf">1.20988E-01</span>
+   <span class="mi">8</span>          <span class="mf">2.18218E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">9.07407E-02</span>
+   <span class="mi">9</span>          <span class="mf">2.18218E-01</span>     <span class="mf">7.86796E-01</span>     <span class="mf">5.77350E-01</span>     <span class="mf">9.07407E-02</span>
+  <span class="mi">10</span>          <span class="mf">2.18218E-01</span>     <span class="mf">9.51190E-01</span>     <span class="mf">2.18218E-01</span>     <span class="mf">1.20988E-01</span>
+
+<span class="n">PSEUDO</span>  <span class="n">CROSS</span>  <span class="n">SECTIONS</span>  <span class="n">DATA</span><span class="p">:</span>
+
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">1</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.22589E-01</span>     <span class="mf">2.02600E-03</span>     <span class="mf">2.83283E-03</span>     <span class="mf">2.20563E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">2</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.16566E-01</span>     <span class="mf">5.86900E-03</span>     <span class="mf">1.04347E-02</span>     <span class="mf">2.10697E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">3</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">3.01439E-01</span>     <span class="mf">5.37000E-03</span>     <span class="mf">5.13036E-04</span>     <span class="mf">2.96069E-01</span>     <span class="mf">1.00000E+00</span>
+ <span class="n">MATERIAL</span> <span class="p">:</span>   <span class="mi">4</span>
+
+ <span class="n">GROUP</span>           <span class="n">TOTAL</span>        <span class="n">ABSORPTION</span>      <span class="n">NU</span><span class="o">*</span><span class="n">FISSION</span>      <span class="n">SCATTERING</span>      <span class="n">FISSION</span> <span class="n">SPECTRUM</span>
+
+   <span class="mi">1</span>          <span class="mf">2.52250E-01</span>     <span class="mf">1.45600E-03</span>     <span class="mf">0.00000E+00</span>     <span class="mf">2.50794E-01</span>     <span class="mf">0.00000E+00</span>
+
+            <span class="o">----------------------------------------------------------</span>
+                        <span class="n">NORMALIZED</span> <span class="n">SCALAR</span>  <span class="n">FLUX</span>  <span class="n">SOLUTION</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">FLUXES</span>  <span class="n">PER</span>  <span class="n">MESH</span>  <span class="n">PER</span>  <span class="n">ENERGY</span>  <span class="n">GROUP</span><span class="p">:</span>
+
+<span class="n">M</span> <span class="n">E</span> <span class="n">S</span> <span class="n">H</span>       <span class="n">G</span> <span class="n">R</span> <span class="n">O</span> <span class="n">U</span> <span class="n">P</span> <span class="mi">1</span>
+
+             <span class="mi">1</span>            <span class="mi">2</span>            <span class="mi">3</span>            <span class="mi">4</span>            <span class="mi">5</span>            <span class="mi">6</span>            <span class="mi">7</span>            <span class="mi">8</span>
+    <span class="mi">1</span>   <span class="mf">1.00000E+00</span>  <span class="mf">8.99018E-01</span>  <span class="mf">7.96162E-01</span>  <span class="mf">6.93054E-01</span>  <span class="mf">4.64773E-01</span>  <span class="mf">2.39120E-01</span>  <span class="mf">1.17909E-01</span>  <span class="mf">3.51124E-02</span>
+    <span class="mi">2</span>   <span class="mf">9.01165E-01</span>  <span class="mf">7.97144E-01</span>  <span class="mf">6.94076E-01</span>  <span class="mf">5.98010E-01</span>  <span class="mf">3.94987E-01</span>  <span class="mf">2.00672E-01</span>  <span class="mf">1.00336E-01</span>  <span class="mf">3.05219E-02</span>
+    <span class="mi">3</span>   <span class="mf">7.99305E-01</span>  <span class="mf">6.95147E-01</span>  <span class="mf">5.78156E-01</span>  <span class="mf">4.86665E-01</span>  <span class="mf">3.19286E-01</span>  <span class="mf">1.62066E-01</span>  <span class="mf">8.34442E-02</span>  <span class="mf">2.61713E-02</span>
+    <span class="mi">4</span>   <span class="mf">6.95459E-01</span>  <span class="mf">5.98931E-01</span>  <span class="mf">4.86670E-01</span>  <span class="mf">4.05703E-01</span>  <span class="mf">2.69057E-01</span>  <span class="mf">1.41666E-01</span>  <span class="mf">7.46702E-02</span>  <span class="mf">2.40013E-02</span>
+    <span class="mi">5</span>   <span class="mf">4.66602E-01</span>  <span class="mf">3.95815E-01</span>  <span class="mf">3.19399E-01</span>  <span class="mf">2.69137E-01</span>  <span class="mf">1.90544E-01</span>  <span class="mf">1.12075E-01</span>  <span class="mf">6.16261E-02</span>  <span class="mf">2.09120E-02</span>
+    <span class="mi">6</span>   <span class="mf">2.40387E-01</span>  <span class="mf">2.01169E-01</span>  <span class="mf">1.62285E-01</span>  <span class="mf">1.41879E-01</span>  <span class="mf">1.12114E-01</span>  <span class="mf">7.75854E-02</span>  <span class="mf">4.62275E-02</span>  <span class="mf">1.64931E-02</span>
+    <span class="mi">7</span>   <span class="mf">1.18727E-01</span>  <span class="mf">1.00733E-01</span>  <span class="mf">8.35693E-02</span>  <span class="mf">7.48131E-02</span>  <span class="mf">6.17163E-02</span>  <span class="mf">4.62580E-02</span>  <span class="mf">2.92000E-02</span>  <span class="mf">1.04020E-02</span>
+    <span class="mi">8</span>   <span class="mf">3.53836E-02</span>  <span class="mf">3.06810E-02</span>  <span class="mf">2.62660E-02</span>  <span class="mf">2.40611E-02</span>  <span class="mf">2.09463E-02</span>  <span class="mf">1.65158E-02</span>  <span class="mf">1.04078E-02</span>  <span class="mf">3.69251E-03</span>
+
+            <span class="o">----------------------------------------------------------</span>
+              <span class="n">OUTPUT</span>  <span class="n">PARAMETER</span> <span class="o">-</span> <span class="n">SOLUTION</span>  <span class="n">TO</span>  <span class="n">TRANSPORT</span>  <span class="n">EQUATION</span>
+            <span class="o">----------------------------------------------------------</span>
+
+<span class="n">K</span><span class="o">-</span><span class="n">EFF</span>                    <span class="o">=</span>      <span class="mf">0.968367</span>
+<span class="n">N</span><span class="o">.</span> <span class="n">OUTER</span> <span class="n">ITERATIONS</span>      <span class="o">=</span>          <span class="mi">7331</span>
+<span class="n">TOTAL</span> <span class="n">INNER</span> <span class="n">ITERATIONS</span>   <span class="o">=</span>            <span class="mi">15</span>
+<span class="n">TOTAL</span> <span class="n">EXECUTION</span> <span class="n">TIME</span>     <span class="o">=</span>    <span class="mi">0</span><span class="p">:</span><span class="mo">00</span><span class="p">:</span><span class="mf">01.65</span>   <span class="p">(</span><span class="n">H</span><span class="p">:</span><span class="n">M</span><span class="p">:</span><span class="n">S</span><span class="p">)</span>
+
+<span class="o">********************************************************************************</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="slab">
+<h3>2.3. Slab<a class="headerlink" href="#slab" title="Permalink to this headline">¶</a></h3>
+<p>Setting up input file for slab geometry in two energy groups with isotropic scattering source.</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of regions&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="nt">&quot;Which material goes in each region&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+      <span class="nt">&quot;Size for each material per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">5.630757</span><span class="p">,</span> <span class="mf">9.726784</span><span class="p">,</span> <span class="mf">5.630757</span><span class="p">],</span>
+      <span class="nt">&quot;Number of fine meshes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.88721</span><span class="p">,</span> <span class="mf">2.9727</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.00209</span><span class="p">,</span> <span class="mf">0.07391</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.838920</span><span class="p">,</span> <span class="mf">0.04635</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000767</span><span class="p">,</span> <span class="mf">2.91830</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.88798</span><span class="p">,</span> <span class="mf">2.9865</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.83975</span><span class="p">,</span> <span class="mf">0.04749</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000336</span><span class="p">,</span> <span class="mf">2.96760</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Geometry in a one-dimensional slab</p>
+<img alt="_images/SlabG.png" src="_images/SlabG.png" />
+<p>Flux in a one-dimensional slab</p>
+<img alt="_images/SlabF.png" src="_images/SlabF.png" />
+</div>
+<div class="section" id="cylinder">
+<h3>2.4. Cylinder<a class="headerlink" href="#cylinder" title="Permalink to this headline">¶</a></h3>
+<p>An example for cylindrical  infinite  cell equivalent to the <strong>TRIGA MARK-II</strong> research reactor pin cell is presented here by using 7 energy groups</p>
+<blockquote>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;parameter&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of energy groups&quot;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of Materials&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Total number of regions&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+      <span class="nt">&quot;Which material goes in each region&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+      <span class="nt">&quot;Ray for each region per [cm]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.3175</span><span class="p">,</span> <span class="mf">1.82769</span><span class="p">,</span> <span class="mf">1.83150</span><span class="p">,</span> <span class="mf">1.88230</span><span class="p">,</span> <span class="mf">2.285814144</span><span class="p">],</span>
+      <span class="nt">&quot;Number of fine meshes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+      <span class="nt">&quot;Number of Angular Discretization&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;The l-order Legendre polonomial&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;Maximum Iteration&quot;</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="nt">&quot;Epsilon Keff&quot;</span><span class="p">:</span> <span class="mf">1.0e-8</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;materials&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 1&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.297551431</span><span class="p">,</span> <span class="mf">0.288909664</span><span class="p">,</span> <span class="mf">0.290306468</span><span class="p">,</span> <span class="mf">0.286637159</span><span class="p">,</span> <span class="mf">0.295583239</span><span class="p">,</span> <span class="mf">0.326837471</span><span class="p">,</span> <span class="mf">0.155639234</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.269680893</span><span class="p">,</span> <span class="mf">0.021221626</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.015676686</span><span class="p">,</span> <span class="mf">0.263059691</span><span class="p">,</span> <span class="mf">0.005057992</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.013507066</span><span class="p">,</span> <span class="mf">0.273815991</span><span class="p">,</span> <span class="mf">0.001186857</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.014034288</span><span class="p">,</span> <span class="mf">0.270365363</span><span class="p">,</span> <span class="mf">0.002092507</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.00079017</span><span class="p">,</span> <span class="mf">0.292969338</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.001078437</span><span class="p">,</span> <span class="mf">0.32539832</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000007539</span><span class="p">,</span> <span class="mf">0.011162732</span><span class="p">,</span> <span class="mf">0.14376993</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 2&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">2.994544</span><span class="p">,</span>  <span class="mf">1.408450959</span><span class="p">,</span> <span class="mf">0.817921932</span><span class="p">,</span> <span class="mf">0.633026483</span><span class="p">,</span> <span class="mf">0.650866502</span><span class="p">,</span> <span class="mf">0.515434679</span><span class="p">,</span> <span class="mf">0.243844582</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.362087986</span><span class="p">,</span> <span class="mf">0.179080763</span><span class="p">,</span> <span class="mf">0.09568437</span><span class="p">,</span> <span class="mf">0.03889374</span><span class="p">,</span> <span class="mf">0.013653221</span><span class="p">,</span> <span class="mf">0.001011529</span><span class="p">,</span> <span class="mf">0.00163296</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">2.739733851</span><span class="p">,</span> <span class="mf">0.036287563</span><span class="p">,</span> <span class="mf">0.014790886</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.038125613</span><span class="p">,</span> <span class="mf">1.255653823</span><span class="p">,</span> <span class="mf">0.014136713</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.166974328</span><span class="p">,</span> <span class="mf">0.274556127</span><span class="p">,</span> <span class="mf">0.320581789</span><span class="p">,</span> <span class="mf">0.00109001</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.036264407</span><span class="p">,</span> <span class="mf">0.11429219</span><span class="p">,</span> <span class="mf">0.651920757</span><span class="p">,</span> <span class="mf">-0.19634513</span><span class="p">,</span> <span class="mf">0.001532029</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.003270334</span><span class="p">,</span> <span class="mf">0.00846593</span><span class="p">,</span> <span class="mf">0.051970962</span><span class="p">,</span> <span class="mf">0.052892578</span><span class="p">,</span> <span class="mf">0.512276254</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mf">0.000000452</span><span class="p">,</span> <span class="mf">0.000001176</span><span class="p">,</span> <span class="mf">0.000010132</span><span class="p">,</span> <span class="mf">0.000008685</span><span class="p">,</span> <span class="mf">0.162129535</span><span class="p">,</span> <span class="mf">0.352055605</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                                   <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000000177</span><span class="p">,</span> <span class="mf">0.000000059</span><span class="p">,</span> <span class="mf">0.001637495</span><span class="p">,</span> <span class="mf">0.098331459</span><span class="p">,</span> <span class="mf">0.142495556</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000390</span><span class="p">,</span> <span class="mf">0.126214</span><span class="p">,</span> <span class="mf">0.872105</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 3&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 4&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.153239138</span><span class="p">,</span> <span class="mf">1.012997908</span><span class="p">,</span> <span class="mf">0.947913799</span><span class="p">,</span> <span class="mf">0.908546838</span><span class="p">,</span> <span class="mf">0.966825787</span><span class="p">,</span> <span class="mf">0.46508365</span><span class="p">,</span> <span class="mf">0.201018163</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">0.810739629</span><span class="p">,</span> <span class="mf">0.066072482</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.070201393</span><span class="p">,</span> <span class="mf">0.778857964</span><span class="p">,</span> <span class="mf">0.018049333</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000005432</span><span class="p">,</span> <span class="mf">0.055959691</span><span class="p">,</span> <span class="mf">0.806723946</span><span class="p">,</span> <span class="mf">0.003927282</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.061596098</span><span class="p">,</span> <span class="mf">0.790102323</span><span class="p">,</span> <span class="mf">0.005981459</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.003658891</span><span class="p">,</span> <span class="mf">0.950937049</span><span class="p">,</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.005035727</span><span class="p">,</span> <span class="mf">0.459136241</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000075732</span><span class="p">,</span> <span class="mf">0.014066679</span><span class="p">,</span> <span class="mf">0.185277698</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+        <span class="nt">&quot;nom&quot;</span><span class="p">:</span> <span class="s2">&quot;material 5&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;XSTotal&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.102999797</span><span class="p">,</span> <span class="mf">1.73516897</span><span class="p">,</span> <span class="mf">0.980823407</span><span class="p">,</span> <span class="mf">0.642418097</span><span class="p">,</span> <span class="mf">0.567747919</span><span class="p">,</span> <span class="mf">0.419879925</span><span class="p">,</span> <span class="mf">0.201975672</span><span class="p">],</span>
+        <span class="nt">&quot;XSNuFission&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+        <span class="nt">&quot;XSScatter Matrix&quot;</span><span class="p">:[[[</span><span class="mf">2.631785406</span><span class="p">,</span> <span class="mf">0.437581882</span><span class="p">,</span> <span class="mf">0.00907283</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.609582022</span><span class="p">,</span> <span class="mf">1.041127377</span><span class="p">,</span> <span class="mf">0.071965385</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.141504305</span><span class="p">,</span> <span class="mf">0.538385484</span><span class="p">,</span> <span class="mf">0.292249692</span><span class="p">,</span> <span class="mf">0.002089256</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.036338638</span><span class="p">,</span> <span class="mf">0.123430676</span><span class="p">,</span> <span class="mf">0.814518036</span><span class="p">,</span> <span class="mf">-0.336757332</span><span class="p">,</span> <span class="mf">0.001951418</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.003425563</span><span class="p">,</span> <span class="mf">0.009933065</span><span class="p">,</span> <span class="mf">0.061937554</span><span class="p">,</span> <span class="mf">0.066020159</span><span class="p">,</span> <span class="mf">0.425993565</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mf">0.000000363</span><span class="p">,</span> <span class="mf">0.000001996</span><span class="p">,</span> <span class="mf">0.000009253</span><span class="p">,</span> <span class="mf">0.00000889</span><span class="p">,</span>  <span class="mf">0.203705679</span><span class="p">,</span> <span class="mf">0.216356046</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+                             <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.000000253</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.001995558</span><span class="p">,</span> <span class="mf">0.110723501</span><span class="p">,</span> <span class="mf">0.089154896</span><span class="p">]]],</span>
+        <span class="nt">&quot;XSChi&quot;</span><span class="p">:</span>  <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Geometry in a two-dimensional TRIGA Reactor</p>
+<img alt="_images/TrigaG.png" src="_images/TrigaG.png" />
+<p>The infinite cell in OpenMC <a class="reference external" href="https://openmc.readthedocs.io/en/stable/">OpenMC</a> is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in <a class="reference external" href="https://openrsn.readthedocs.io/en/latest/index.html">OpenRSN</a> and <a class="reference external" href="https://openmc.readthedocs.io/en/stable/">OpenMC</a> are shown in Table below.</p>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Calculate infinite multiplication factor <span class="math notranslate nohighlight">\(k_{inf}\)</span>.</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="59%" />
+<col width="41%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Surface</th>
+<th class="head"><span class="math notranslate nohighlight">\(k_{inf}\)</span></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>OpenRSN</td>
+<td>1.403180</td>
+</tr>
+<tr class="row-odd"><td>OoenMC</td>
+<td>1.417226</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sphere">
+<h3>2.5. Sphere<a class="headerlink" href="#sphere" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pin-cell">
+<h3>2.6. Pin Cell<a class="headerlink" href="#pin-cell" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="License.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Theory.html" class="btn btn-neutral float-left" title="Theory and Methodogy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Mohamed LAHDOUR
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
