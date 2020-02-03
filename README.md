@@ -479,15 +479,15 @@ The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is repre
 
 
 
-[**Project Description**](https://Openntp.readthedocs.io/en/latest/index.html)
+[**Project Description**](https://Openrsn.readthedocs.io/en/latest/index.html)
 
-[**Project Presentation**](https://Openntp.readthedocs.io/en/latest/index.html)
+[**Project Presentation**](https://Openrsn.readthedocs.io/en/latest/index.html)
 
-[**Installation Instruction**](https://Openntp.readthedocs.io/en/latest/Installation.html)
+[**Installation Instruction**](https://Openrsn.readthedocs.io/en/latest/Installation.html)
 
-[**Documentation**](https://Openntp.readthedocs.io/en/latest/index.html)
+[**Documentation**](https://Openrsn.readthedocs.io/en/latest/index.html)
 
-[**Video Demo**](https://Openntp.readthedocs.io/en/latest/index.html)
+[**Video Demo**](https://Openrsn.readthedocs.io/en/latest/index.html)
 
 Dependencies:
 * numpy (>=1.16)
@@ -504,4 +504,4 @@ Dependencies:
 
 This code is distributed under the GNU General Public License, see the LICENSE file.
 
-[license](https://Openntp.readthedocs.io/en/latest/License.html).
+[license](https://Openrsn.readthedocs.io/en/latest/License.html).
