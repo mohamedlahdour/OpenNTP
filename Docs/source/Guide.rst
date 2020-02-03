@@ -348,8 +348,7 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
 2.2.2. Generating JSON Input File
 ---------------------------------
 
-Another method is to use a set of buttons on the left side of the main
-window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Generate Input File** button the input JSON file will be automatically generated in the window **Text editor**.
+To facilitate the creation of a new OpenNTP input file, a set of dialog boxes have been developed (Below) which allows users to create the OpenNTP input file in a simpler, faster and interactive. Users can fill in all the information on this OpenNTP file (including: number of group energy, materials, Pin cells, assemblies, type of geometry, multi-group cross sections ...) and once they have specified input files in JSON format will be automatically created in the window **Text editor** by clicking on button **Generate Input file**
 
 .. image:: _images/insert.png 
 
