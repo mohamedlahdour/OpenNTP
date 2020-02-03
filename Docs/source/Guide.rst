@@ -4,15 +4,15 @@ User's Guide
 1. Graphical User Interface
 ========================
 
-A graphical user interface written in Python programing language has been developed to simplify the use of package OpenRSN.
+A graphical user interface written in Python programing language has been developed to simplify the use of package OpenNTP.
 After starting the software by typing the following command line in a terminal:
 
     .. code-block:: python
 
-         cd OpenRSN
-         $ python3 main.py
+         cd OpenNTP
+         $ python main.py
 
-A main window (GUI) of the package OpenRSN on an Ubuntu Linux machine will be displayed as in Figure bellow.
+A main window (GUI) of the package OpenNTP on an Ubuntu Linux machine will be displayed as in Figure bellow.
 
 .. image:: _images/main.png 
 
@@ -28,66 +28,318 @@ A main window (GUI) of the package OpenRSN on an Ubuntu Linux machine will be di
 -----------------------------
 
 The input data file must be in JSON format. The first method is
-to write it directly in **Text editor**  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from `[Filho et al.,2002]. <https://doi.org/10.1016/S0168-9274(01)00074-5>`_
+to write it directly in **Text editor**  as is shown in the figure below, which illustrates an example input file of a C5G7 benchmark on deterministic transport calculations without spatial homogenization taken from `[Lewis, E. E., et al.,2001]. <https://doi.org/10.1016/j.pnueene.2004.09.003>`_
 
 
     .. code-block:: json
- 
+
         {
           "data": {
             "parameter": {
               "id": 100,
-              "Total number of energy groups": 1,
-              "Total number of Materials": 4,
-              "Total number of X regions": 4,
-              "Total number of Y regions": 4,
-              "X region thickness per [cm]": [35, 10, 20, 40],
-              "Y region thickness per [cm]": [35, 10, 20, 40],
-              "Which material fills each cell":[[4, 4, 4, 4],
-                                                  [3, 3, 3, 4],
-                                                  [2, 2, 3, 4],
-                                                  [1, 2, 3, 4]],
-              "XY number of fine meshes in each cell":[[8, 8, 8, 8],
-                                                       [8, 8, 8, 8],
-                                                       [8, 8, 8, 8],
-                                                       [8, 8, 8, 8]],
-              "Number of Angular Discretization": 8,
+              "Total number of energy groups": 7,
+              "Total number of materials": 7,
+              "Total number of pin cells": 7,
+              "Total number of assemblies": 3,
+              "Core":[[3,3,3],
+                      [2,1,3],
+                      [1,2,3]],
+              "Number of angular discretizations": 4,
               "The l-order Legendre polynomial": 0,
-              "Maximum Number of Iterations": 200,
-              "Criterion of Keff convergence": 1.0e-8
+              "Maximum number of iterations": 200,
+              "Criterion of Keff convergence": 1.0e-6
             },
-            "materials": [
+            "Assemblies": [
               {
                 "id": 1,
-                "nom": "a",
-                "XSTotal": [0.222589],
-                "XSNuFission": [0.00283283],
-                "XSScatter Matrix":[[0.220563]],
-                "XSChi":  [1.0]
+                "nom": "UO2",
+                "assembly": [[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,1,1,6,1,1,6,1,1,6,1,1,1,1,1], 
+                             [1,1,1,6,1,1,1,1,1,1,1,1,1,6,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,6,1,1,6,1,1,6,1,1,6,1,1,6,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,6,1,1,6,1,1,5,1,1,6,1,1,6,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,6,1,1,6,1,1,6,1,1,6,1,1,6,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,6,1,1,1,1,1,1,1,1,1,6,1,1,1], 
+                             [1,1,1,1,1,6,1,1,6,1,1,6,1,1,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1], 
+                             [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]]
               },
               {
                 "id": 2,
-                "nom": "b",
-                "XSTotal": [0.216566],
-                "XSNuFission": [0.0104347],
-                "XSScatter Matrix":[[0.210697]],
-                "XSChi":  [1.0]
+                "nom": "MOX",
+                "assembly": [[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
+                             [2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2],
+                             [2,3,3,3,3,6,3,3,6,3,3,6,3,3,3,3,2],
+                             [2,3,3,6,3,4,4,4,4,4,4,4,3,6,3,3,2],
+                             [2,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3,2],
+                             [2,3,6,4,4,6,4,4,6,4,4,6,4,4,6,3,2],
+                             [2,3,3,4,4,4,4,4,4,4,4,4,4,4,3,3,2],
+                             [2,3,3,4,4,4,4,4,4,4,4,4,4,4,3,3,2],
+                             [2,3,6,4,4,6,4,4,5,4,4,6,4,4,6,3,2],
+                             [2,3,3,4,4,4,4,4,4,4,4,4,4,4,3,3,2],
+                             [2,3,3,4,4,4,4,4,4,4,4,4,4,4,3,3,2],
+                             [2,3,6,4,4,6,4,4,6,4,4,6,4,4,6,3,2],
+                             [2,3,3,3,4,4,4,4,4,4,4,4,4,3,3,3,2],
+                             [2,3,3,6,3,4,4,4,4,4,4,4,3,6,3,3,2],
+                             [2,3,3,3,3,6,3,3,6,3,3,6,3,3,3,3,2],
+                             [2,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2],
+                             [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2]]
               },
               {
                 "id": 3,
-                "nom": "c",
-                "XSTotal": [0.301439],
-                "XSNuFission": [0.000513036],
-                "XSScatter Matrix":[[0.296069]],
-                "XSChi":  [1.0]
+                "nom": "Moderator",
+                "assembly": [[7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],
+                             [7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7]]
+              }
+        ],
+            "PinCells": [
+              {
+                "id": 1,
+                "nom": "UO2",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,1,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              },
+              {
+                "id": 2,
+                "nom": "MOX4.3%",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,2,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              },
+              {
+                "id": 3,
+                "nom": "MOX7.0%",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,3,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
               },
               {
                 "id": 4,
-                "nom": "d",
-                "XSTotal": [0.252250],
-                "XSNuFission": [0.0],
-                "XSScatter Matrix":[[0.250794]],
-                "XSChi":  [0.0]
+                "nom": "MOX8.7%",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,4,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              },
+              {
+                "id": 5,
+                "nom": "Fission Chamber",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,5,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              },
+              {
+                "id": 6,
+                "nom": "Guide Tube",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,6,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              },
+              {
+                "id": 7,
+                "nom": "Moderator",
+                "width_x":[0.15144,0.95712,0.15144],
+                "width_y":[0.15144,0.95712,0.15144],
+                "mat_fill": [[7,7,7],
+                             [7,7,7],
+                             [7,7,7]],
+                "fine_mesh": [[1,1,1],
+                              [1,1,1],
+                              [1,1,1]]
+              }
+        ],
+            "materials": [
+              {
+                "id": 1,
+                "nom": "UO2",
+                "XSTotal":
+        [1.77949E-01,3.29805E-01,4.80388E-01,5.54367E-01,3.11801E-01,3.95168E-01,5.64406E-01],
+                "XSNuFission":
+        [2.00599E-02,2.02730E-03,1.57059E-02,4.51830E-02,4.33421E-02,2.02090E-01,5.25711E-01],
+                "XSFission":
+        [7.21206E-03,8.19301E-04,6.45320E-03,1.85648E-02,1.78084E-02,8.30348E-02,2.16004E-01],
+                "XSScatter Matrix":
+        [[[1.27537E-01,4.23780E-02,9.43740E-06,5.51630E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,3.24456E-01,1.63140E-03,3.14270E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,4.50940E-01,2.67920E-03,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,4.52565E-01,5.56640E-03,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,1.25250E-04,2.71401E-01,1.02550E-02,1.00210E-08],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,1.29680E-03,2.65802E-01,1.68090E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,8.54580E-03,2.73080E-01]]],
+                "XSChi":  
+        [5.87910E-01,4.11760E-01,3.39060E-04,1.17610E-07,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 2,
+                "nom": "MOX4.3%",
+                "XSTotal":
+        [1.78731E-01,3.30849E-01,4.83772E-01,5.66922E-01,4.26227E-01,6.78997E-01,6.82852E-01],
+                "XSNuFission": 
+        [2.17530E-02,2.53510E-03,1.62679E-02,6.54741E-02,3.07241E-02,6.66651E-01,7.13990E-01],
+                "XSFission":
+        [7.62704E-03,8.76898E-04,5.69835E-03,2.28872E-02,1.07635E-02,2.32757E-01,2.48968E-01],
+                "XSScatter Matrix":
+        [[[1.28876E-01,4.14130E-02,8.22900E-06,5.04050E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,3.25452E-01,1.63950E-03,1.59820E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,4.53188E-01,2.61420E-03,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,4.57173E-01,5.53940E-03,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,1.60460E-04,2.76814E-01,9.31270E-03,9.16560E-09],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,2.00510E-03,2.52962E-01,1.48500E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,8.49480E-03,2.65007E-01]]],
+                "XSChi": 
+        [5.87910E-01,4.11760E-01,3.39060E-04,1.17610E-07,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 3,
+                "nom": "MOX7.0%",
+                "XSTotal":
+        [1.81323E-01,3.34368E-01,4.93785E-01,5.91216E-01,4.74198E-01,8.33601E-01,8.53603E-01],
+                "XSNuFission": 
+        [2.38140E-02,3.85869E-03,2.41340E-02,9.43662E-02,4.57699E-02,9.28181E-01,1.04320E+00],
+                "XSFission":
+        [8.25446E-03,1.32565E-03,8.42156E-03,3.28730E-02,1.59636E-02,3.23794E-01,3.62803E-01],
+                "XSScatter Matrix":
+        [[[1.30457E-01,4.17920E-02,8.51050E-06,5.13290E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,3.28428E-01,1.64360E-03,2.20170E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,4.58371E-01,2.53310E-03,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,4.63709E-01,5.47660E-03,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,1.76190E-04,2.82313E-01,8.72890E-03,9.00160E-09],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,2.27600E-03,2.49751E-01,1.31140E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,8.86450E-03,2.59529E-01]]],
+                "XSChi": 
+        [5.87910E-01,4.11760E-01,3.39060E-04,1.17610E-07,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 4,
+                "nom": "MOX8.7%",
+                "XSTotal": 
+        [1.83045E-01,3.36705E-01,5.00507E-01,6.06174E-01,5.02754E-01,9.21028E-01,9.55231E-01],
+                "XSNuFission": 
+        [2.51860E-02,4.73951E-03,2.94781E-02,1.12250E-01,5.53030E-02,1.07500E+00,1.23930E+00],
+                "XSFission":
+        [8.67209E-03,1.62426E-03,1.02716E-02,3.90447E-02,1.92576E-02,3.74888E-01,4.30599E-01],
+                "XSScatter Matrix":
+        [[[1.31504E-01,4.20460E-02,8.69720E-06,5.19380E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,3.30403E-01,1.64630E-03,2.60060E-09,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,4.61792E-01,2.47490E-03,0.00000E-00,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,4.68021E-01,5.43300E-03,0.00000E-00,0.00000E-00],
+          [0.00000E-00,0.00000E-00,0.00000E-00,1.85970E-04,2.85771E-01,8.39730E-03,8.92800E-09],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,2.39160E-03,2.47614E-01,1.23220E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,8.96810E-03,2.56093E-01]]],
+                "XSChi": 
+        [5.87910E-01,4.11760E-01,3.39060E-04,1.17610E-07,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 5,
+                "nom": "Fission Chamber",
+                "XSTotal":
+        [1.26032E-01,2.93160E-01,2.84250E-01,2.81020E-01,3.34460E-01,5.65640E-01,1.17214E+00],
+                "XSNuFission": 
+        [1.32340E-08,1.43450E-08,1.12860E-06,1.27630E-05,3.53850E-07,1.74010E-06,5.06330E-06],
+                "XSFission":
+        [4.79002E-09,5.82564E-09,4.63719E-07,5.24406E-06,1.45390E-07,7.14972E-07,2.08041E-06],
+                "XSScatter Matrix":
+        [[[6.61659E-02,5.90700E-02,2.83340E-04,1.46220E-06,2.06420E-08,0.00000E-00,0.00000E-00],
+          [0.00000E-00,2.40377E-01,5.24350E-02,2.49900E-04,1.92390E-05,2.98750E-06,4.21400E-07],
+          [0.00000E-00,0.00000E-00,1.83425E-01,9.22880E-02,6.93650E-03,1.07900E-03,2.05430E-04],
+          [0.00000E-00,0.00000E-00,0.00000E-00,7.90769E-02,1.69990E-01,2.58600E-02,4.92560E-03],
+          [0.00000E-00,0.00000E-00,0.00000E-00,3.73400E-05,9.97570E-02,2.06790E-01,2.44780E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,9.17420E-04,3.16774E-01,2.38760E-01],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,4.97930E-02,1.0991E+00]]],
+                "XSChi": 
+        [5.87910E-01,4.11760E-01,3.39060E-04,1.17610E-07,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 6,
+                "nom": "Guide Tube",
+                "XSTotal":
+        [1.26032E-01,2.93160E-01,2.84240E-01,2.80960E-01,3.34440E-01,5.65640E-01,1.17215E+00],
+                "XSNuFission": 
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00],
+                "XSFission":
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00],
+                "XSScatter Matrix":
+        [[[6.61659E-02,5.90700E-02,2.83340E-04,1.46220E-06,2.06420E-08,0.00000E-00,0.00000E-00],
+          [0.00000E-00,2.40377E-01,5.24350E-02,2.49900E-04,1.92390E-05,2.98750E-06,4.21400E-07],
+          [0.00000E-00,0.00000E-00,1.83297E-01,9.23970E-02,6.94460E-03,1.08030E-03,2.05670E-04],
+          [0.00000E-00,0.00000E-00,0.00000E-00,7.88511E-02,1.70140E-01,2.58810E-02,4.92970E-03],
+          [0.00000E-00,0.00000E-00,0.00000E-00,3.73330E-05,9.97372E-02,2.06790E-01,2.44780E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,9.17260E-04,3.16765E-01,2.38770E-01],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,4.97920E-02,1.09912E+00]]],
+                "XSChi": 
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00]
+              },
+              {
+                "id": 7,
+                "nom": "Moderator",
+                "XSTotal":
+        [1.59206E-01,4.12970E-01,5.90310E-01,5.84350E-01,7.18000E-01,1.25445E+00,2.65038E+00],
+                "XSNuFission": 
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00],
+                "XSFission":
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00],
+                "XSScatter Matrix":
+        [[[4.44777E-02,1.13400E-01,7.23470E-04,3.74990E-06,5.31840E-08,0.00000E-00,0.00000E-00],
+          [0.00000E-00,2.82334E-01,1.29940E-01,6.23400E-04,4.80020E-05,7.44860E-06,1.04550E-06],
+          [0.00000E-00,0.00000E-00,3.45256E-01,2.24570E-01,1.69990E-02,2.64430E-03,5.03440E-04],
+          [0.00000E-00,0.00000E-00,0.00000E-00,9.10284E-02,4.15510E-01,6.37320E-02,1.21390E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,7.14370E-05,1.39138E-01,5.11820E-01,6.12290E-02],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,2.21570E-03,6.99913E-01,5.37320E-01],
+          [0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,0.00000E-00,1.32440E-01,2.48070E+00]]],              
+                "XSChi":  
+        [0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00,0.00000E+00]
               }
             ]
           }
@@ -97,12 +349,26 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
 ---------------------------------
 
 Another method is to use a set of buttons on the left side of the main
-window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Data Up** button the input JSON file will be automatically generated in the window **Text editor** .
+window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Generate Input File** button the input JSON file will be automatically generated in the window **Text editor**.
 
 .. image:: _images/insert.png 
 
+.. image:: _images/photo2.png 
 
-2.2.3. Running OpenRSN under a GUI
+.. image:: _images/photo3.png 
+
+.. image:: _images/insert2.png 
+
+.. image:: _images/photo5.png 
+
+.. image:: _images/photo6.png 
+
+.. image:: _images/photo7.png 
+
+.. image:: _images/photo8.png 
+
+
+2.2.3. Running OpenNTP under a GUI
 ----------------------------------
 
 The **Run** button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.
@@ -139,7 +405,7 @@ The following is the corresponding output to the above case. A brief outline of 
         ********************************************************************************
         ERSN, UNIVERSITY ABDELMALEK ESSAADI FACULTY OF SCIENCES - TETOUAN, MOROCCO
         CODE  DEVELOPED  BY  MOHAMED  LAHDOUR,  PHD  STUDENT
-        OpenRSN:         SN  DISCRETE  ORDINATES  METHOD
+        OpenNTP:         SN  DISCRETE  ORDINATES  METHOD
         DIMENSION:       TWO DIMENSIONS (2D) 
         GEOMETRY:        CARTESIAN
         VERSION NUMBER:  1.2
@@ -388,14 +654,14 @@ Geometry in a two-dimensional TRIGA Reactor
 
 .. image:: _images/TrigaG.png 
 
-The infinite cell in OpenMC `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in `OpenRSN <https://openrsn.readthedocs.io/en/latest/index.html>`_ and `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ are shown in Table below.
+The infinite cell in OpenMC `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in `OpenNTP <https://OpenNTP.readthedocs.io/en/latest/index.html>`_ and `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ are shown in Table below.
 
 .. table:: Calculate infinite multiplication factor :math:`k_{inf}`.
 
     +----------------------+---------------+
     | Surface              |:math:`k_{inf}`|
     +======================+===============+
-    | OpenRSN              | 1.403180      |
+    | OpenNTP              | 1.403180      |
     |                      |               |
     +----------------------+---------------+
     |                      |               |

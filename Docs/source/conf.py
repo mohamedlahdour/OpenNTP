@@ -19,7 +19,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = u'OpenRSN'
+project = u'OpenNTP'
 copyright = u'2019, Mohamed LAHDOUR'
 author = u'Mohamed LAHDOUR'
 
@@ -69,7 +69,7 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = None
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -104,7 +104,7 @@ html_static_path = ['nstatic']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OpenRSNdoc'
+htmlhelp_basename = 'OpenNTPdoc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -131,7 +131,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OpenRSN.tex', u'OpenRSN Documentation',
+    (master_doc, 'OpenNTP.tex', u'OpenNTP Documentation',
      u'Mohamed LAHDOUR', 'manual'),
 ]
 
@@ -141,7 +141,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'openrsn', u'OpenRSN Documentation',
+    (master_doc, 'OpenNTP', u'OpenNTP Documentation',
      [author], 1)
 ]
 
@@ -152,13 +152,12 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'OpenRSN', u'OpenRSN Documentation',
-     author, 'OpenRSN', 'One line description of project.',
+    (master_doc, 'OpenNTP', u'OpenNTP Documentation',
+     author, 'OpenNTP', 'One line description of project.',
      'Miscellaneous'),
 ]
 
-
-html_logo = '_images/LOGO.png'
+html_logo = '_images/logo.png'
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
