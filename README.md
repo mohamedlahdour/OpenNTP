@@ -462,7 +462,7 @@ The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is repre
     +----------------------+------------------+
     | Surface              |        kinf      |
     +======================+==================+
-    | OpenNTP             |    1.403180      |
+    | OpenNTP              |    1.403180      |
     |                      |                  |
     +----------------------+------------------+
     |                      |                  |
