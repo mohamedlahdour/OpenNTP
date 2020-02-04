@@ -394,14 +394,14 @@ The **Run** button is used to running the multi-group scheme, and the figure bel
 2.2.4. Geometry Visualization
 ----------------------------
 
-The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section **Creating JSON Input File** is illustrated in Figure bellow
+The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ is illustrated in Figure bellow
 
 .. image:: _images/geom.png 
 
 2.2.5. Flux Visualization
 -------------------------
 
-The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section **Creating JSON Input File**  with four regions and four materials after clicking on the **Plot** button.
+The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_  with four regions and four materials after clicking on the **Plot** button.
 
 .. image:: _images/flux.png 
 2.2.6. Level symmetric gaussian quadrature sets visualization
