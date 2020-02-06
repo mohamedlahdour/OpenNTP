@@ -401,14 +401,14 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 2.2.5. Flux Visualization
 -------------------------
 
-The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_  with four regions and four materials after clicking on the **Plot** button.
+The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ after clicking on the **Plot** button.
 
 - The 2D C5G7 benchmark solved with `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_ 
-..  Thermal flux
+*  Thermal flux
 
 .. image:: _images/flux.png 
 
-..  Fast flux
+*  Fast flux
 
 .. image:: _images/flux2.png 
 
