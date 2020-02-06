@@ -403,7 +403,15 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_  with four regions and four materials after clicking on the **Plot** button.
 
+- The 2D C5G7 benchmark solved with `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_ 
+..  Thermal flux
+
 .. image:: _images/flux.png 
+
+..  Fast flux
+
+.. image:: _images/flux2.png 
+
 2.2.6. Level symmetric gaussian quadrature sets visualization
 -------------------------------------------------------------
 
@@ -414,7 +422,7 @@ The level-symmetric quadrature set is used in the Discrete Ordinates (:math:`S_{
 2.2.7. Simple Output
 --------------------
 
-The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport eqaution.
+The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport equation.
   
     .. code-block:: python
 
@@ -612,12 +620,12 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
                 "XSTotal": [2.994544,  1.408450959, 0.817921932, 0.633026483, 0.650866502, 0.515434679, 0.243844582],
                 "XSNuFission": [0.362087986, 0.179080763, 0.09568437, 0.03889374, 0.013653221, 0.001011529, 0.00163296],
                 "XSScatter Matrix":[[[2.739733851, 0.036287563, 0.014790886, 0, 0, 0, 0],
-                                           [0.038125613, 1.255653823, 0.014136713, 0, 0, 0, 0], 
-                                           [0.166974328, 0.274556127, 0.320581789, 0.00109001, 0, 0, 0], 
-                                           [0.036264407, 0.11429219, 0.651920757, -0.19634513, 0.001532029, 0, 0], 
-                                           [0.003270334, 0.00846593, 0.051970962, 0.052892578, 0.512276254, 0, 0],
-                                           [0.000000452, 0.000001176, 0.000010132, 0.000008685, 0.162129535, 0.352055605, 0], 
-                                           [0, 0, 0.000000177, 0.000000059, 0.001637495, 0.098331459, 0.142495556]]],
+                                     [0.038125613, 1.255653823, 0.014136713, 0, 0, 0, 0], 
+                                     [0.166974328, 0.274556127, 0.320581789, 0.00109001, 0, 0, 0], 
+                                     [0.036264407, 0.11429219, 0.651920757, -0.19634513, 0.001532029, 0, 0], 
+                                     [0.003270334, 0.00846593, 0.051970962, 0.052892578, 0.512276254, 0, 0],
+                                     [0.000000452, 0.000001176, 0.000010132, 0.000008685, 0.162129535, 0.352055605, 0], 
+                                     [0, 0, 0.000000177, 0.000000059, 0.001637495, 0.098331459, 0.142495556]]],
                 "XSChi":  [0, 0, 0, 0, 0.000390, 0.126214, 0.872105]
               },
               { 
