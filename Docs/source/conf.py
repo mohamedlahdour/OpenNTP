@@ -157,7 +157,7 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
-html_logo = '_images/LOGO.png'
+html_logo = '_images/logo.png'
 # -- Options for Epub output -------------------------------------------------
 
 # Bibliographic Dublin Core info.
