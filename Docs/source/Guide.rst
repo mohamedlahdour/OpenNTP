@@ -398,7 +398,7 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 
 .. image:: _images/geom.png 
 
-2.2.5. Flux Visualization hhhhhhhhh
+2.2.5. Flux Visualization 
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ after clicking on the **Plot** button.
