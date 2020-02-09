@@ -406,7 +406,8 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 - The 2D C5G7 benchmark solved with `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_ 
 *  Thermal flux
 
-.. image:: _images/flux.png 
+.. embedded-video:: _images/fluxes.mp4
+   :format: vimeo
 
 *  Fast flux
 
