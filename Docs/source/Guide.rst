@@ -408,8 +408,10 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 *  Thermal flux
 
 .. raw:: html
-    <iframe width="560" height="315" src="https://youtu.be/fN84SXR6U7M" frameborder="0" allowfullscreen></iframe>
 
+    <div style="text-align: center; margin-bottom: 2em;">
+    <iframe width="100%" height="350" src="https://youtu.be/fN84SXR6U7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
 
 *  Fast flux
 
