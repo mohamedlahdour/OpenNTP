@@ -241,21 +241,21 @@ The **Run** button is used to running the multi-group scheme, and the figure bel
 
 The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File` is illustrated in Figure bellow
 
-![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/geom.png)
+![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/geom2.png)
 
 2.2.5. Flux Visualizations
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File`  with four regions and four materials after clicking on the **Plot** button.
 
-![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/flux.png)
+![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/fluxes.png)
 
 2.2.6. Pin Power Visualizations
 -------------------------
 
 Next we will visualize the pin power results obtained from the **OpenNTP** calculations.
 
-![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower.png)
+![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower2.png)
  
 2.2.6. Level symmetric gaussian quadrature sets visualizations
 -------------------------------------------------------------
