@@ -227,7 +227,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
 Another method is to use a set of buttons on the left side of the main
 window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Data Up** button the input JSON file will be automatically generated in the window **Text editor** .
 
-![Image 1](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert.png)
+![Image 1](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert20.png)
 
 2.2.3. Running OpenNTP under a GUI
 ----------------------------------
