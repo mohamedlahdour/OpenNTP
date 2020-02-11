@@ -103,60 +103,117 @@ The input data file must be in JSON format. The first method is
 to write it directly in **Text editor**  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from [Filho et al.,2002](https://doi.org/10.1016/S0168-9274(01)00074-5)
 
 
- 
+
         {
           "data": {
             "parameter": {
               "id": 100,
               "Total number of energy groups": 1,
-              "Total number of Materials": 4,
-              "Total number of X regions": 4,
-              "Total number of Y regions": 4,
-              "X region thickness per [cm]": [35, 10, 20, 40],
-              "Y region thickness per [cm]": [35, 10, 20, 40],
-              "Which material fills each cell":[[4, 4, 4, 4],
-                                                  [3, 3, 3, 4],
-                                                  [2, 2, 3, 4],
-                                                  [1, 2, 3, 4]],
-              "XY number of fine meshes in each cell":[[8, 8, 8, 8],
-                                                       [8, 8, 8, 8],
-                                                       [8, 8, 8, 8],
-                                                       [8, 8, 8, 8]],
-              "Number of Angular Discretization": 8,
+              "Total number of materials": 4,
+              "Total number of pin cells": 4,
+              "Total number of assemblies": 1,
+              "Core":[[1]],
+              "Total number of active pin cells": 169,
+              "Number of angular discretizations": 2,
               "The l-order Legendre polynomial": 0,
-              "Maximum Number of Iterations": 200,
-              "Criterion of Keff convergence": 1.0e-8
+              "Maximum number of iterations": 300,
+              "Criterion of Keff convergence": 1.0e-6
             },
+            "Assemblies": [
+              {
+                "id": 1,
+                "nom": "assembly 1",
+                "assembly":[[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4],
+                            [3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [2,2,2,2,2,2,2,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4],
+                            [1,1,1,1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,4]]
+              }
+        ],
+            "PinCells": [
+              {
+                "id": 1,
+                "nom": "cell 1",
+                "width_x":[5],
+                "width_y":[5],
+                "mat_fill": [[1]],
+                "fine_mesh": [[4]]
+              },
+              {
+                "id": 2,
+                "nom": "cell 2",
+                "width_x":[5],
+                "width_y":[5],
+                "mat_fill": [[2]],
+                "fine_mesh": [[4]]
+              },
+              {
+                "id": 3,
+                "nom": "cell 3",
+                "width_x":[5],
+                "width_y":[5],
+                "mat_fill": [[3]],
+                "fine_mesh": [[4]]
+              },
+              {
+                "id": 4,
+                "nom": "cell 4",
+                "width_x":[5],
+                "width_y":[5],
+                "mat_fill": [[4]],
+                "fine_mesh": [[4]]
+              }
+        ],
             "materials": [
               {
                 "id": 1,
-                "nom": "a",
+                "nom": "Mat 1",
                 "XSTotal": [0.222589],
                 "XSNuFission": [0.00283283],
+                "XSFission": [0.00283283],
                 "XSScatter Matrix":[[0.220563]],
                 "XSChi":  [1.0]
               },
               {
                 "id": 2,
-                "nom": "b",
+                "nom": "Mat 2",
                 "XSTotal": [0.216566],
                 "XSNuFission": [0.0104347],
+                "XSFission": [0.0104347],
                 "XSScatter Matrix":[[0.210697]],
                 "XSChi":  [1.0]
               },
               {
                 "id": 3,
-                "nom": "c",
+                "nom": "Mat 3",
                 "XSTotal": [0.301439],
                 "XSNuFission": [0.000513036],
+                "XSFission": [0.000513036],
                 "XSScatter Matrix":[[0.296069]],
                 "XSChi":  [1.0]
               },
               {
                 "id": 4,
-                "nom": "d",
+                "nom": "Mat 4",
                 "XSTotal": [0.252250],
                 "XSNuFission": [0.0],
+                "XSFission": [0.0],
                 "XSScatter Matrix":[[0.250794]],
                 "XSChi":  [0.0]
               }
@@ -179,26 +236,33 @@ The **Run** button is used to running the multi-group scheme, and the figure bel
 
 ![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/runing.png)
 
-2.2.4. Geometry Visualization
+2.2.4. Geometry Visualizations
 ----------------------------
 
 The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File` is illustrated in Figure bellow
 
 ![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/geom.png)
 
-2.2.5. Flux Visualization
+2.2.5. Flux Visualizations
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File`  with four regions and four materials after clicking on the **Plot** button.
 
 ![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/flux.png)
+
+2.2.6. Pin Power Visualizations
+-------------------------
+
+Next we will visualize the pin power results obtained from the `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_  calculations.
+
+![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower.png)
  
-2.2.6. Level symmetric gaussian quadrature sets visualization
+2.2.6. Level symmetric gaussian quadrature sets visualizations
 -------------------------------------------------------------
 
 The level-symmetric quadrature set is used in the Discrete Ordinates ![](http://latex.codecogs.com/gif.latex?S_%5Ctext%7BN%7D) method (Lewis and Miller, 1984). The subscript ![](http://latex.codecogs.com/gif.latex?N) refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
-![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/ordin.png)
+![Image 6](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/ordin.png)
 
 2.2.7. Simple Output
 --------------------
@@ -348,11 +412,11 @@ Setting up input file for slab geometry in two energy groups with isotropic scat
 
 Geometry in a one-dimensional slab
 
-![Image 6](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabG.png)
+![Image 7](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabG.png)
 
 Flux in a one-dimensional slab
 
-![Image 7](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabF.png)
+![Image 8](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabF.png)
 
 
 2.4. Cylinder or Pin Cell
@@ -453,7 +517,7 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
 
 Geometry in a two-dimensional TRIGA Reactor 
 
-![Image 8](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
+![Image 9](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
 
 The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in [OpenNTP](https://OpenNTP.readthedocs.io/en/latest/index.html) and [OpenMC](https://openmc.readthedocs.io/en/stable/) are shown in Table below.
 

@@ -41,6 +41,7 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
               "Total number of materials": 7,
               "Total number of pin cells": 7,
               "Total number of assemblies": 3,
+              "Total number of active pin cells": 1060,
               "Core":[[3,3,3],
                       [2,1,3],
                       [1,2,3]],
@@ -123,9 +124,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,1,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 2,
@@ -135,9 +136,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,2,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 3,
@@ -147,9 +148,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,3,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 4,
@@ -159,9 +160,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,4,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 5,
@@ -171,9 +172,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,5,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 6,
@@ -183,9 +184,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,6,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               },
               {
                 "id": 7,
@@ -195,9 +196,9 @@ to write it directly in **Text editor**  as is shown in the figure below, which 
                 "mat_fill": [[7,7,7],
                              [7,7,7],
                              [7,7,7]],
-                "fine_mesh": [[1,1,1],
-                              [1,1,1],
-                              [1,1,1]]
+                "fine_mesh": [[4,4,4],
+                              [4,4,4],
+                              [4,4,4]]
               }
         ],
             "materials": [
@@ -391,14 +392,14 @@ The **Run** button is used to running the multi-group scheme, and the figure bel
 
 .. image:: _images/runing.png
 
-2.2.4. Geometry Visualization
+2.2.4. Geometry Visualizations
 ----------------------------
 
 The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ is illustrated in Figure bellow
 
 .. image:: _images/geom.png 
 
-2.2.5. Flux Visualization Pin Power Visualizations
+2.2.5. Flux Visualizations 
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ after clicking on the **Plot** button.
@@ -420,7 +421,7 @@ Next we will visualize the pin power results obtained from the `OpenNTP <https:/
 
 .. image:: _images/PinPower.png
 
-2.2.7. Level symmetric gaussian quadrature sets visualization
+2.2.7. Level symmetric gaussian quadrature sets visualizations
 -------------------------------------------------------------
 
 The level-symmetric quadrature set is used in the Discrete Ordinates (:math:`S_{N}`) method (Lewis and Miller, 1984). The subscript :math:`N`.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
