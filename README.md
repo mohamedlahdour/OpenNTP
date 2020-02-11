@@ -153,7 +153,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
                 "width_x":[5],
                 "width_y":[5],
                 "mat_fill": [[1]],
-                "fine_mesh": [[4]]
+                "fine_mesh": [[1]]
               },
               {
                 "id": 2,
@@ -161,7 +161,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
                 "width_x":[5],
                 "width_y":[5],
                 "mat_fill": [[2]],
-                "fine_mesh": [[4]]
+                "fine_mesh": [[1]]
               },
               {
                 "id": 3,
@@ -169,7 +169,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
                 "width_x":[5],
                 "width_y":[5],
                 "mat_fill": [[3]],
-                "fine_mesh": [[4]]
+                "fine_mesh": [[1]]
               },
               {
                 "id": 4,
@@ -177,7 +177,7 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
                 "width_x":[5],
                 "width_y":[5],
                 "mat_fill": [[4]],
-                "fine_mesh": [[4]]
+                "fine_mesh": [[1]]
               }
         ],
             "materials": [
@@ -253,7 +253,7 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 2.2.6. Pin Power Visualizations
 -------------------------
 
-Next we will visualize the pin power results obtained from the `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_  calculations.
+Next we will visualize the pin power results obtained from the **OpenNTP** calculations.
 
 ![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower.png)
  
