@@ -219,20 +219,34 @@ to write it directly in **Text editor**  as is shown in the figure bellow, which
 2.2.2. Generating JSON Input File
 ---------------------------------
 
-Another method is to use a set of buttons on the left side of the main
-window [ref], these buttons allow users to insert input data automatically without requiring an in-depth knowledge of JSON file syntax. Once the user clicks on **Data Up** button the input JSON file will be automatically generated in the window **Text editor** .
+To facilitate the creation of a new OpenNTP input file, a set of dialog boxes have been developed (Below) which allows users to create the OpenNTP input file in a simpler, faster and interactive. Users can fill up all information about the OpenNTP input file (including: number of group energy, materials, Pin cells, assemblies, type of geometry, multi-group cross sections ...) and once they have specified input files in JSON format will be automatically created in the window **Text editor** by clicking on button **Generate Input file**.
+
+- Definition of Pin Cells by introducing in each coarse meshes size along the x and y-axis, then the material index and the number of fine mesh.
+
 
 ![Image 1](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert20.png)
 
+- inserting the pin cells index into each assembly.
+
 ![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert21.png)
+
+- Definition of the general structure of the reactor core by inserting the assembly indices in their locations.
 
 ![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert22.png)
 
+- Insertion of total multi-group macroscopic cross section data.
+
 ![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert23.png)
+
+- Insertion of nu-fission  multi-group macroscopic cross section data.
 
 ![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert24.png)
 
+- Insertion of scatternig matrix multi-group macroscopic cross section data
+
 ![Image 6](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert25.png)
+
+- Insertion of fission spectrum data.
 
 ![Image 7](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert26.png)
 
