@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>955</width>
+    <height>919</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>955</width>
+    <height>813</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>955</width>
+     <height>726</height>
+    </size>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QFrame" name="frame_2">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_14">
+       <item row="1" column="1">
+        <widget class="QLabel" name="label_23">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Notebooks</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QTabWidget" name="tabWidget_3">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab_5">
+          <attribute name="title">
+           <string>Output Window</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QTextEdit" name="textEdit_3">
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_6">
+          <attribute name="title">
+           <string>Input Window</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="1">
+            <widget class="QTextEdit" name="textEdit_4">
+             <property name="html">
+              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Computational Dimension</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" rowspan="2">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="maximumSize">
+          <size>
+           <width>480</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Sans Serif</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>One-Dimensional</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="5" column="1">
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Controles</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_4">
+                <property name="text">
+                 <string>Compile</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="text">
+                 <string>Run</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string> Calculation Method </string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton_2">
+                <property name="text">
+                 <string>CP&amp;1D</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QRadioButton" name="radioButton_3">
+                <property name="text">
+                 <string>SN1D</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QRadioButton" name="radioButton_4">
+                <property name="text">
+                 <string>MOC1D</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string> Approximation Scheme </string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_8">
+              <item row="0" column="0">
+               <widget class="QComboBox" name="comboBox_4">
+                <item>
+                 <property name="text">
+                  <string>Step Characteristics</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>DD0</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>DD1</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QComboBox" name="comboBox_3">
+                <item>
+                 <property name="text">
+                  <string>Step Difference</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Diamond Difference</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QGroupBox" name="groupBox_5">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Plots</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="text">
+                 <string>Geometry</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pushButton_3">
+                <property name="text">
+                 <string>Scalar Flux</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0" rowspan="5">
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Input Parametres</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0" colspan="2">
+               <widget class="QComboBox" name="comboBox">
+                <item>
+                 <property name="text">
+                  <string>Slab Geometry</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Cylindrical Geometry</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Spherical Geometry</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="test.qrc">:/icons/icons/SigT.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="test.qrc">:/icons/icons/Chi.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Tolerance : 1.0E</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Angular Discretization </string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="spinBox"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QSpinBox" name="spinBox_3"/>
+              </item>
+              <item row="6" column="1">
+               <widget class="QSpinBox" name="spinBox_6"/>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>icons/NuSigF.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Number of Regions </string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QPushButton" name="pushButton_10">
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="test.qrc">:/icons/icons/SigS.png</pixmap>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_11">
+                <property name="text">
+                 <string>Generate Input File</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>Size/NFMR/Materials </string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QSpinBox" name="spinBox_4"/>
+              </item>
+              <item row="7" column="1">
+               <widget class="QSpinBox" name="spinBox_7"/>
+              </item>
+              <item row="9" column="1">
+               <widget class="QPushButton" name="pushButton_7">
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QPushButton" name="pushButton_8">
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QSpinBox" name="spinBox_5"/>
+              </item>
+              <item row="11" column="1">
+               <widget class="QPushButton" name="pushButton_9">
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>Energy Group Number </string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="spinBox_2"/>
+              </item>
+              <item row="14" column="0">
+               <spacer name="verticalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Legendre Order </string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>Number of Materials </string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>Maximum Iterations </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QGroupBox" name="groupBox_12">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string> Boundary Conditions</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_18">
+              <item row="0" column="0">
+               <widget class="QComboBox" name="comboBox_2">
+                <item>
+                 <property name="text">
+                  <string>Vacuum</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Vacuum Reflective</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective Vacuum</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>Two-Dimensional</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="1" column="0" rowspan="4">
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="font">
+              <font>
+               <family>Sans Serif</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Input Parameters</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_9">
+              <item row="10" column="1">
+               <widget class="QSpinBox" name="spinBox_16"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_32">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Number of Assemblies</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
+               <widget class="QComboBox" name="comboBox_12">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>TotalXS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>FissionXS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>NuFissionXS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>ScatterMatrixXS</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Chi</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="16" column="0">
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="11" column="0" colspan="2">
+               <widget class="QLabel" name="label_26">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Constructive Geometry</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="1">
+               <widget class="QSpinBox" name="spinBox_13"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Energy Group Number </string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0" colspan="2">
+               <widget class="QLabel" name="label_34">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Multi-group Cross Sections</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="spinBox_8"/>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QComboBox" name="comboBox_8">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Cartesian Geometry</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QSpinBox" name="spinBox_14"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QSpinBox" name="spinBox_9"/>
+              </item>
+              <item row="12" column="0">
+               <widget class="QComboBox" name="comboBox_7">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="autoFillBackground">
+                 <bool>true</bool>
+                </property>
+                <property name="currentIndex">
+                 <number>0</number>
+                </property>
+                <property name="sizeAdjustPolicy">
+                 <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Pin Cell</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Assembly</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Core</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="14" column="1">
+               <widget class="QPushButton" name="pushButton_23">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_39">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Number of Pin Cells</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_38">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Legendre Order </string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_44">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Tolerance : 1.0E</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QPushButton" name="pushButton_26">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Insert</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QSpinBox" name="spinBox_15"/>
+              </item>
+              <item row="7" column="1">
+               <widget class="QSpinBox" name="spinBox_12"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_11">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Number of Materials </string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_36">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Pin x-y Number</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QSpinBox" name="spinBox_11"/>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_42">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Angular Discretization </string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_43">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Maximum Iterations </string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="spinBox_10"/>
+              </item>
+              <item row="5" column="1">
+               <widget class="QSpinBox" name="spinBox_17"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Assembly x-y Number</string>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_16">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Generate Input File</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QGroupBox" name="groupBox_9">
+             <property name="font">
+              <font>
+               <family>Sans Serif</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Plots</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_16">
+              <item row="0" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_12">
+                <property name="text">
+                 <string>Geometry</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_22">
+                <property name="text">
+                 <string>Ordinates</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QPushButton" name="pushButton_21">
+                <property name="text">
+                 <string>Scalar Flux</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pushButton_6">
+                <property name="text">
+                 <string>Power</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="pushButton_19">
+                <property name="text">
+                 <string>PowerPF</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="font">
+              <font>
+               <family>Sans Serif</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string> Boundary Conditions</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <widget class="QComboBox" name="comboBox_5">
+                <item>
+                 <property name="text">
+                  <string>Vacuum Right</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective Right</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QComboBox" name="comboBox_11">
+                <item>
+                 <property name="text">
+                  <string>Vacuum Bottom</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective Bottom</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QComboBox" name="comboBox_9">
+                <item>
+                 <property name="text">
+                  <string>Vacuum Left </string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective Left</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QComboBox" name="comboBox_10">
+                <item>
+                 <property name="text">
+                  <string>Vacuum Top</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Reflective Top</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="font">
+              <font>
+               <family>Sans Serif</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string>Controles</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_17">
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pushButton_20">
+                <property name="text">
+                 <string>Run</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pushButton_18">
+                <property name="text">
+                 <string>Compile</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="title">
+              <string> Calculation Method</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="0" column="0">
+               <widget class="QRadioButton" name="radioButton">
+                <property name="font">
+                 <font>
+                  <family>Sans Serif</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>SN&amp;2D</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+      <zorder>label_23</zorder>
+      <zorder>tabWidget</zorder>
+      <zorder>tabWidget_3</zorder>
+      <zorder>label</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>955</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>Fi&amp;le</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <widget class="QMenu" name="menu_Geometry">
+     <property name="title">
+      <string>&amp;Geometry</string>
+     </property>
+     <property name="icon">
+      <iconset resource="test.qrc">
+       <normaloff>:/icons/icons/geometry.png</normaloff>:/icons/icons/geometry.png</iconset>
+     </property>
+     <property name="separatorsCollapsible">
+      <bool>true</bool>
+     </property>
+     <addaction name="action_Slab"/>
+     <addaction name="action_Sphere"/>
+     <addaction name="action_Cylinder"/>
+    </widget>
+    <addaction name="action_Compile_2"/>
+    <addaction name="action_Run"/>
+    <addaction name="action_Plot"/>
+    <addaction name="menu_Geometry"/>
+    <addaction name="separator"/>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="action_Save"/>
+    <addaction name="separator"/>
+    <addaction name="action_Save_as"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <addaction name="action_Undo"/>
+    <addaction name="action_Redo"/>
+    <addaction name="separator"/>
+    <addaction name="action_Cut"/>
+    <addaction name="action_Copy"/>
+    <addaction name="action_Paste"/>
+    <addaction name="separator"/>
+    <addaction name="action_Find"/>
+    <addaction name="separator"/>
+    <addaction name="action_Select_All"/>
+   </widget>
+   <widget class="QMenu" name="menu_View">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_About">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_Help"/>
+    <addaction name="separator"/>
+    <addaction name="action_About"/>
+    <addaction name="action_website"/>
+    <addaction name="action_About_Qt"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menu_Edit"/>
+   <addaction name="menu_View"/>
+   <addaction name="menu_About"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Compile_2"/>
+   <addaction name="action_Run"/>
+   <addaction name="action_Plot"/>
+   <addaction name="separator"/>
+   <addaction name="action_New"/>
+   <addaction name="action_Open"/>
+   <addaction name="action_Save"/>
+   <addaction name="action_Save_as"/>
+   <addaction name="separator"/>
+   <addaction name="action_Undo"/>
+   <addaction name="action_Redo"/>
+   <addaction name="separator"/>
+   <addaction name="action_Cut"/>
+   <addaction name="action_Copy"/>
+   <addaction name="action_Paste"/>
+   <addaction name="action_Select_All"/>
+   <addaction name="action_Find"/>
+   <addaction name="separator"/>
+   <addaction name="action_Help"/>
+   <addaction name="action_About"/>
+   <addaction name="action_website"/>
+   <addaction name="separator"/>
+   <addaction name="action_Exit"/>
+  </widget>
+  <action name="action_Run">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/run.png</normaloff>:/icons/icons/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Run</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Plot">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/plot.png</normaloff>:/icons/icons/plot.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Plot</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/new_file.png</normaloff>:/icons/icons/new_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/open_file.png</normaloff>:/icons/icons/open_file.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/save.png</normaloff>:/icons/icons/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Save_as">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/save_as.png</normaloff>:/icons/icons/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sa&amp;ve as</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/exit_editor.png</normaloff>:/icons/icons/exit_editor.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Slab">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/slab.png</normaloff>:/icons/icons/slab.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Slab</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Sphere">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/sphere.png</normaloff>:/icons/icons/sphere.png</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;phere</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Cylinder">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/cylinder.png</normaloff>:/icons/icons/cylinder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Cylinder</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Compile_2">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/compile.png</normaloff>:/icons/icons/compile.png</iconset>
+   </property>
+   <property name="text">
+    <string comment="Ctrl+E">&amp;Compile</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true"/>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+   <property name="priority">
+    <enum>QAction::NormalPriority</enum>
+   </property>
+  </action>
+  <action name="action_Undo">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/undo.png</normaloff>:/icons/icons/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Undo</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Redo">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/redo.png</normaloff>:/icons/icons/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Redo</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Cut">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/cut.png</normaloff>:/icons/icons/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Cut</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Copy">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/copy.png</normaloff>:/icons/icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>C&amp;opy</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Paste">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/paste.png</normaloff>:/icons/icons/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Paste</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Find">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/on_find.png</normaloff>:/icons/icons/on_find.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Find</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Select_All">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/Select_All.png</normaloff>:/icons/icons/Select_All.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Select All</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Help">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/help_box.png</normaloff>:/icons/icons/help_box.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Help</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_About">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/about.png</normaloff>:/icons/icons/about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_website">
+   <property name="icon">
+    <iconset resource="test.qrc">
+     <normaloff>:/icons/icons/web.png</normaloff>:/icons/icons/web.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;website</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_About_Qt">
+   <property name="text">
+    <string>About &amp;Qt</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="test.qrc"/>
+  <include location="test.qrc"/>
+ </resources>
+ <connections/>
+</ui>

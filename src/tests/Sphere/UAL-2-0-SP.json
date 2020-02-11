@@ -1,0 +1,83 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 2,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material fills each region":[1],
+      "Ray for each region per [cm]":[17.66770],
+      "Number of fine meshes": [100],
+      "Number of Angular Discretization": 0,
+      "The l-order Legendre polynomial": 0,
+      "Maximum Number of Iterations": 200,
+      "Criterion of Keff convergence": 1.0e-8
+    },
+    "materials": [
+      {
+        "id": 1,
+        "nom": "UAL-2-0-SP",
+        "XSTotal": [1.276976, 0.268165],
+        "XSNuFission": [0.171799376, 0.0],
+        "XSScatter Matrix":[[[1.213127, 0.0000 ], 
+                            [0.020432, 0.247516]]],
+        "XSChi":  [0.0, 1.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

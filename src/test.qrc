@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/web.png</file>
+    <file>icons/about.png</file>
+    <file>icons/Change_Theme.png</file>
+    <file>icons/Chi.png</file>
+    <file>icons/compile.png</file>
+    <file>icons/copy.png</file>
+    <file>icons/cut.png</file>
+    <file>icons/cylinder.png</file>
+    <file>icons/exit_editor.png</file>
+    <file>icons/geometry.png</file>
+    <file>icons/help_box.png</file>
+    <file>icons/matrixa.png</file>
+    <file>icons/new_file.png</file>
+    <file>icons/on_find.png</file>
+    <file>icons/open_file.png</file>
+    <file>icons/paste.png</file>
+    <file>icons/plot.png</file>
+    <file>icons/redo.png</file>
+    <file>icons/run.png</file>
+    <file>icons/save_as.png</file>
+    <file>icons/save.png</file>
+    <file>icons/Select_All.png</file>
+    <file>icons/SigF.png</file>
+    <file>icons/SigS.png</file>
+    <file>icons/SigT.png</file>
+    <file>icons/slab.png</file>
+    <file>icons/sphere.png</file>
+    <file>icons/U.png</file>
+    <file>icons/undo.png</file>
+  </qresource>
+</RCC>
