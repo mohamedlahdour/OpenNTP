@@ -234,7 +234,7 @@ window [ref], these buttons allow users to insert input data automatically witho
 
 The **Run** button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.
 
-![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/runing.png)
+![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/runing2.png)
 
 2.2.4. Geometry Visualizations
 ----------------------------
