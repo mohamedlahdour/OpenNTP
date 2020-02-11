@@ -398,7 +398,7 @@ The **geometry** button allowing to plot in two dimensions the geometry to study
 
 .. image:: _images/geom.png 
 
-2.2.5. Flux Visualization 
+2.2.5. Flux Visualization Pin Power Visualizations
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File <https://openrsn.readthedocs.io/en/latest/Guide.html#creating-json-input-file>`_ after clicking on the **Plot** button.
@@ -407,24 +407,27 @@ The **Plot** button refers to a set of routines programming in fortran and pytho
 
 *  Thermal flux
 
-.. raw:: html
-
-    <div style="text-align: center; margin-bottom: 2em;">
-    <iframe width="100%" height="350" src="https://youtu.be/fN84SXR6U7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+.. image:: _images/flux.png
 
 *  Fast flux
 
 .. image:: _images/flux2.png 
 
-2.2.6. Level symmetric gaussian quadrature sets visualization
+2.2.6. Pin Power Visualizations
+-------------------------
+
+Next we will visualize the pin power results obtained from the `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_  calculations.
+
+.. image:: _images/PinPower.png
+
+2.2.7. Level symmetric gaussian quadrature sets visualization
 -------------------------------------------------------------
 
 The level-symmetric quadrature set is used in the Discrete Ordinates (:math:`S_{N}`) method (Lewis and Miller, 1984). The subscript :math:`N`.refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
 .. image:: _images/ordin.png 
 
-2.2.7. Simple Output
+2.2.8. Simple Output
 --------------------
 
 The following is the corresponding output to the above case. A brief outline of the output file contents is version and run time information, print of input values of the name list variables, print of relevant parameters after setup, calculation run time parametres method, scalar flux solution and output parameters solution to transport equation.
