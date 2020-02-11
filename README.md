@@ -42,20 +42,17 @@ Installing on Linux
 -------------------
 
 1. If you are using Ubuntu 18.10 or newer, open a terminal in a GNU/Linux box then install gfortran with the following commands:
-    .. code-block:: python
 
         sudo apt-get update
         sudo apt-get install gfortran
 
 2. You need to install numpy (F2PY) and matplotlib library to run the package OpenNTP:
-    .. code-block:: python
 
         sudo apt install python-pip
         sudo apt-get install python-numpy
         pip install numpy matplotlib
 
 3. You need to install PyQt5 on Ubuntu with python to run the GUI:
-    .. code-block:: python
 
         pip install --user pyqt5  
         sudo apt-get install python-pyqt5  
@@ -63,13 +60,11 @@ Installing on Linux
         sudo apt-get install qttools5-dev-tools
 
 4. Install the OpenNTP package
-    .. code-block:: python
 
         git clone  https://github.com/mohamedlahdour/OpenNTP.git
 
 5. Import the *OpenNTP* and run the package in the following way:
-    .. code-block:: python
-
+    
          cd OpenNTP
          $ python main.py
 
@@ -229,40 +224,52 @@ window [ref], these buttons allow users to insert input data automatically witho
 
 ![Image 1](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert20.png)
 
+![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert21.png)
+
+![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert22.png)
+
+![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert23.png)
+
+![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert24.png)
+
+![Image 6](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert25.png)
+
+![Image 7](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/insert26.png)
+
 2.2.3. Running OpenNTP under a GUI
 ----------------------------------
 
 The **Run** button is used to running the multi-group scheme, and the figure below shows the values of the multiplication factor as a function of the iteration numbers.
 
-![Image 2](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/runing2.png)
+![Image 8](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/runing2.png)
 
 2.2.4. Geometry Visualizations
 ----------------------------
 
 The **geometry** button allowing to plot in two dimensions the geometry to study. The plotting mode of the geometry is based on the presence of an input file. A depiction of the geometry for the example input file given in sub section `Creating JSON Input File` is illustrated in Figure bellow
 
-![Image 3](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/geom2.png)
+![Image 9](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/geom2.png)
 
 2.2.5. Flux Visualizations
 -------------------------
 
 The **Plot** button refers to a set of routines programming in fortran and python to plot the scalar flux in space of one or two-dimensional and in each energy group. The figure bellow shows the flux for the example input file given in sub section `Creating JSON Input File`  with four regions and four materials after clicking on the **Plot** button.
 
-![Image 4](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/fluxes.png)
+![Image 10](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/fluxes.png)
 
 2.2.6. Pin Power Visualizations
 -------------------------
 
 Next we will visualize the pin power results obtained from the **OpenNTP** calculations.
 
-![Image 5](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower2.png)
+![Image 11](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/PinPower2.png)
  
 2.2.6. Level symmetric gaussian quadrature sets visualizations
 -------------------------------------------------------------
 
 The level-symmetric quadrature set is used in the Discrete Ordinates ![](http://latex.codecogs.com/gif.latex?S_%5Ctext%7BN%7D) method (Lewis and Miller, 1984). The subscript ![](http://latex.codecogs.com/gif.latex?N) refers to the number of directions along each axis with half being positive and half negative. The figure below give the weights and angles used for each set in the 1st octant which will be displayed automatically by clicking on the **Ordinate** button
 
-![Image 6](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/ordin.png)
+![Image 12](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/ordin.png)
 
 2.2.7. Simple Output
 --------------------
@@ -541,11 +548,11 @@ Setting up input file for slab geometry in two energy groups with isotropic scat
 
 Geometry in a one-dimensional slab
 
-![Image 7](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabG.png)
+![Image 13](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabG.png)
 
 Flux in a one-dimensional slab
 
-![Image 8](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabF.png)
+![Image 14](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabF.png)
 
 
 2.4. Cylinder or Pin Cell
@@ -590,12 +597,12 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
                 "XSTotal": [2.994544,  1.408450959, 0.817921932, 0.633026483, 0.650866502, 0.515434679, 0.243844582],
                 "XSNuFission": [0.362087986, 0.179080763, 0.09568437, 0.03889374, 0.013653221, 0.001011529, 0.00163296],
                 "XSScatter Matrix":[[[2.739733851, 0.036287563, 0.014790886, 0, 0, 0, 0],
-                                           [0.038125613, 1.255653823, 0.014136713, 0, 0, 0, 0], 
-                                           [0.166974328, 0.274556127, 0.320581789, 0.00109001, 0, 0, 0], 
-                                           [0.036264407, 0.11429219, 0.651920757, -0.19634513, 0.001532029, 0, 0], 
-                                           [0.003270334, 0.00846593, 0.051970962, 0.052892578, 0.512276254, 0, 0],
-                                           [0.000000452, 0.000001176, 0.000010132, 0.000008685, 0.162129535, 0.352055605, 0], 
-                                           [0, 0, 0.000000177, 0.000000059, 0.001637495, 0.098331459, 0.142495556]]],
+                                     [0.038125613, 1.255653823, 0.014136713, 0, 0, 0, 0], 
+                                     [0.166974328, 0.274556127, 0.320581789, 0.00109001, 0, 0, 0], 
+                                     [0.036264407, 0.11429219, 0.651920757, -0.19634513, 0.001532029, 0, 0], 
+                                     [0.003270334, 0.00846593, 0.051970962, 0.052892578, 0.512276254, 0, 0],
+                                     [0.000000452, 0.000001176, 0.000010132, 0.000008685, 0.162129535, 0.352055605, 0], 
+                                     [0, 0, 0.000000177, 0.000000059, 0.001637495, 0.098331459, 0.142495556]]],
                 "XSChi":  [0, 0, 0, 0, 0.000390, 0.126214, 0.872105]
               },
               { 
@@ -646,7 +653,7 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
 
 Geometry in a two-dimensional TRIGA Reactor 
 
-![Image 9](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
+![Image 15](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
 
 The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in [OpenNTP](https://OpenNTP.readthedocs.io/en/latest/index.html) and [OpenMC](https://openmc.readthedocs.io/en/stable/) are shown in Table below.
 
