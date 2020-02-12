@@ -98,7 +98,6 @@ The input data file must be in JSON format. The first method is
 to write it directly in **Text editor**  as is shown in the figure bellow, which illustrates an example input file of a simplified nuclear reactor with a quarter  of the x,y square 2D core taken from [Filho et al.,2002](https://doi.org/10.1016/S0168-9274(01)00074-5)
 
 
-
         {
           "data": {
             "parameter": {
@@ -560,11 +559,11 @@ Setting up input file for slab geometry in two energy groups with isotropic scat
           }  
         }
 
-Geometry in a one-dimensional slab
+- Geometry in a one-dimensional slab
 
 ![Image 13](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabG.png)
 
-Flux in a one-dimensional slab
+- Flux in a one-dimensional slab
 
 ![Image 14](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SlabF.png)
 
