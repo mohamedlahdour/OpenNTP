@@ -670,17 +670,17 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
 
 The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in [OpenNTP](https://OpenNTP.readthedocs.io/en/latest/index.html) and [OpenMC](https://openmc.readthedocs.io/en/stable/) are shown in Table below.
 
-.. table:: Calculate infinite multiplication factor ![Eq](http://latex.codecogs.com/gif.latex?k_%5Ctext%7Binf%7D).
+ Calculate infinite multiplication factor ![Eq](http://latex.codecogs.com/gif.latex?k_%5Ctext%7Binf%7D).
 
-    +----------------------+------------------+
-    | Surface              |        kinf      |
-    +======================+==================+
-    | OpenNTP              |    1.403180      |
-    |                      |                  |
-    +----------------------+------------------+
-    |                      |                  |
-    | OoenMC               |    1.417226      |
-    +----------------------+------------------+
+        +----------------------+------------------+
+        | Surface              |        kinf      |
+        +======================+==================+
+        | OpenNTP              |    1.403180      |
+        |                      |                  |
+        +----------------------+------------------+
+        |                      |                  |
+        | OoenMC               |    1.417226      |
+        +----------------------+------------------+
 
 
 -----------------------------
