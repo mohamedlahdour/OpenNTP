@@ -665,7 +665,7 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
           }  
         }
 
-Geometry in a two-dimensional TRIGA Reactor 
+- Geometry in a two-dimensional TRIGA Reactor 
 
 ![Image 15](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
 
@@ -684,8 +684,56 @@ The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is repre
     +----------------------+------------------+
 
 
+-----------------------------
 2.5. Sphere
------------
+-----------------------------
+
+Setting up input file for the Uc-H2O(2)-1-0-SL benchmark taken from `[Sood, A., et al.,2003]. <https://doi.org/10.1016/S0149-1970(02)00098-7>`_, which is a sphere geometry in one energy groups with isotropic scattering source.
+
+
+        { 
+          "data": { 
+            "parameter": { 
+              "id": 100,
+              "Total number of energy groups": 1,
+              "Total number of Materials": 2,
+              "Total number of regions": 2,
+              "Which material fills each region": [1, 2],
+              "Ray for each region per [cm]": [6.12745, 12.2549],
+              "Number of fine meshes": [100, 100],
+              "Number of Angular Discretization": 0,
+              "The l-order Legendre polynomial": 0,
+              "Maximum Number of Iterations": 200,
+              "Criterion of Keff convergence": 1e-6
+            }, 
+            "materials": [
+              { 
+                "id": 1, 
+                "nom": "material 1",
+                "XSTotal": [0.3264],
+                "XSNuFission": [0.176733066],
+                "XSScatter Matrix":[[[0.248064]]],
+                "XSChi":  [1]
+              },
+              { 
+                "id": 2, 
+                "nom": "material 2",
+                "XSTotal": [0.3264],
+                "XSNuFission": [0.0],
+                "XSScatter Matrix":[[[0.29376]]],
+                "XSChi":  [0]
+              }
+            ]  
+          }  
+        }
+
+- Geometry in a one-dimensional sphere
+
+![Image 16](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereG.png) 
+
+- Flux in a one-dimensional sphere
+
+![Image 17](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereF.png)
 
 
 
