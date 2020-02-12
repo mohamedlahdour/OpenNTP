@@ -1374,4 +1374,4 @@ Setting up input file for the Uc-H2O(2)-1-0-SL benchmark taken from `[Sood, A., 
 
 - Flux in a one-dimensional sphere
 
-.. image:: _images/SpherF.png 
+.. image:: _images/SphereF.png 
