@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.4)  11 FEB 2020 17:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.7.4)  13 FEB 2020 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,24 +977,24 @@ File: geom.png Graphic file (type png)
 Package pdftex.def Info: geom.png  used on input line 614.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
  [19 <./runing.png>]
-<flux.png, id=185, 462.528pt x 346.896pt>
-File: flux.png Graphic file (type png)
-<use flux.png>
-Package pdftex.def Info: flux.png  used on input line 631.
-(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
- [20 <./geom.png>]
-<flux2.png, id=192, 462.528pt x 346.896pt>
+<flux2.png, id=185, 462.528pt x 346.896pt>
 File: flux2.png Graphic file (type png)
 <use flux2.png>
-Package pdftex.def Info: flux2.png  used on input line 638.
+Package pdftex.def Info: flux2.png  used on input line 631.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
- [21 <./flux.png>]
+ [20 <./geom.png>]
+<flux.png, id=192, 462.528pt x 346.896pt>
+File: flux.png Graphic file (type png)
+<use flux.png>
+Package pdftex.def Info: flux.png  used on input line 638.
+(pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
+ [21 <./flux2.png>]
 <PinPower.png, id=200, 462.528pt x 346.896pt>
 File: PinPower.png Graphic file (type png)
 <use PinPower.png>
 Package pdftex.def Info: PinPower.png  used on input line 645.
 (pdftex.def)             Requested size: 462.52686pt x 346.89514pt.
- [22 <./flux2.png>]
+ [22 <./flux.png>]
 <ordin.png, id=207, 462.528pt x 346.896pt>
 File: ordin.png Graphic file (type png)
 <use ordin.png>

@@ -59,7 +59,7 @@
 
 
 \title{OpenNTP Documentation}
-\date{Feb 11, 2020}
+\date{Feb 13, 2020}
 \release{1.2}
 \author{Mohamed LAHDOUR}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -628,14 +628,14 @@ Thermal flux
 
 \end{itemize}
 
-\noindent\sphinxincludegraphics{{flux}.png}
+\noindent\sphinxincludegraphics{{flux2}.png}
 \begin{itemize}
 \item {} 
 Fast flux
 
 \end{itemize}
 
-\noindent\sphinxincludegraphics{{flux2}.png}
+\noindent\sphinxincludegraphics{{flux}.png}
 
 
 \subsubsection{2.2.6. Pin Power Visualizations}
@@ -1382,7 +1382,7 @@ The following is the corresponding output to the above case. A brief outline of 
 
 \subsection{2.3. Slab}
 \label{\detokenize{Guide:slab}}
-Setting up input file for slab geometry in two energy groups with isotropic scattering source.
+Setting up input file for the URRb-H2Oa-2-0-SL benchmark taken from \sphinxhref{https://doi.org/10.1016/S0149-1970(02)00098-7}{{[}Sood, A., et al.,2003{]}.}, which is a slab geometry in two energy groups with isotropic scattering source.
 \begin{quote}
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
@@ -1425,12 +1425,18 @@ Setting up input file for slab geometry in two energy groups with isotropic scat
 \PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 \end{quote}
-
+\begin{itemize}
+\item {} 
 Geometry in a one-dimensional slab
 
-\noindent\sphinxincludegraphics{{SlabG}.png}
+\end{itemize}
 
+\noindent\sphinxincludegraphics{{SlabG}.png}
+\begin{itemize}
+\item {} 
 Flux in a one-dimensional slab
+
+\end{itemize}
 
 \noindent\sphinxincludegraphics{{SlabF}.png}
 
@@ -1532,8 +1538,11 @@ An example for cylindrical  infinite  cell equivalent to the \sphinxstylestrong{
 \PYG{p}{\PYGZcb{}}
 \end{sphinxVerbatim}
 \end{quote}
-
+\begin{itemize}
+\item {} 
 Geometry in a two-dimensional TRIGA Reactor
+
+\end{itemize}
 
 \noindent\sphinxincludegraphics{{TrigaG}.png}
 
@@ -1544,7 +1553,7 @@ The infinite cell in OpenMC \sphinxhref{https://openmc.readthedocs.io/en/stable/
 \centering
 \sphinxcapstartof{table}
 \sphinxthecaptionisattop
-\sphinxcaption{Calculate infinite multiplication factor \protect\(k_{inf}\protect\).}\label{\detokenize{Guide:id6}}
+\sphinxcaption{Calculate infinite multiplication factor \protect\(k_{inf}\protect\).}\label{\detokenize{Guide:id7}}
 \sphinxaftertopcaption
 \begin{tabulary}{\linewidth}[t]{|T|T|}
 \hline
@@ -1571,6 +1580,62 @@ OoenMC
 
 \subsection{2.5. Sphere}
 \label{\detokenize{Guide:sphere}}
+Setting up input file for the Uc-H2O(2)-1-0-SL benchmark taken from \sphinxhref{https://doi.org/10.1016/S0149-1970(02)00098-7}{{[}Sood, A., et al.,2003{]}.}, which is a sphere geometry in one energy groups with isotropic scattering source.
+\begin{quote}
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}data\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+    \PYG{n+nt}{\PYGZdq{}parameter\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}id\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{100}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Total number of energy groups\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Total number of Materials\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Total number of regions\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Which material fills each region\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Ray for each region per [cm]\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{6.12745}\PYG{p}{,} \PYG{l+m+mf}{12.2549}\PYG{p}{]}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Number of fine meshes\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{100}\PYG{p}{,} \PYG{l+m+mi}{100}\PYG{p}{]}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Number of Angular Discretization\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}The l\PYGZhy{}order Legendre polynomial\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{0}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Maximum Number of Iterations\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{200}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}Criterion of Keff convergence\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mf}{1e\PYGZhy{}6}
+    \PYG{p}{\PYGZcb{}}\PYG{p}{,}
+    \PYG{n+nt}{\PYGZdq{}materials\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+      \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}id\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}nom\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}material 1\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSTotal\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{0.3264}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSNuFission\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{0.176733066}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSScatter Matrix\PYGZdq{}}\PYG{p}{:}\PYG{p}{[}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.248064}\PYG{p}{]}\PYG{p}{]}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSChi\PYGZdq{}}\PYG{p}{:}  \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+      \PYG{p}{\PYGZcb{}}\PYG{p}{,}
+      \PYG{p}{\PYGZob{}}
+        \PYG{n+nt}{\PYGZdq{}id\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}nom\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}material 2\PYGZdq{}}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSTotal\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{0.3264}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSNuFission\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{0.0}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSScatter Matrix\PYGZdq{}}\PYG{p}{:}\PYG{p}{[}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.29376}\PYG{p}{]}\PYG{p}{]}\PYG{p}{]}\PYG{p}{,}
+        \PYG{n+nt}{\PYGZdq{}XSChi\PYGZdq{}}\PYG{p}{:}  \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+      \PYG{p}{\PYGZcb{}}
+    \PYG{p}{]}
+  \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{sphinxVerbatim}
+\end{quote}
+\begin{itemize}
+\item {} 
+Geometry in a one-dimensional sphere
+
+\end{itemize}
+
+\noindent\sphinxincludegraphics{{SphereG}.png}
+\begin{itemize}
+\item {} 
+Flux in a one-dimensional sphere
+
+\end{itemize}
+
+\noindent\sphinxincludegraphics{{SphereF}.png}
+
 
 \chapter{License}
 \label{\detokenize{License:license}}\label{\detokenize{License::doc}}

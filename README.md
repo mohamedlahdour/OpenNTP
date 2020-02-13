@@ -668,6 +668,10 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
 
 ![Image 15](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaG.png) 
 
+- Flux in a one-dimensional TRIGA Reactor 
+
+![Image 16](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/TrigaF.png)
+
 The infinite cell in [OpenMC](https://openmc.readthedocs.io/en/stable/) is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in [OpenNTP](https://OpenNTP.readthedocs.io/en/latest/index.html) and [OpenMC](https://openmc.readthedocs.io/en/stable/) are shown in Table below.
 
  Calculate infinite multiplication factor ![Eq](http://latex.codecogs.com/gif.latex?k_%5Ctext%7Binf%7D).
@@ -728,11 +732,11 @@ Setting up input file for the Uc-H2O(2)-1-0-SL benchmark taken from `[Sood, A., 
 
 - Geometry in a one-dimensional sphere
 
-![Image 16](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereG.png) 
+![Image 17](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereG.png) 
 
 - Flux in a one-dimensional sphere
 
-![Image 17](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereF.png)
+![Image 18](https://github.com/mohamedlahdour/OpenNTP/blob/master/Docs/source/_images/SphereF.png)
 
 
 

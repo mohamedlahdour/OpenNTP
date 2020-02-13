@@ -1310,6 +1310,10 @@ An example for cylindrical  infinite  cell equivalent to the **TRIGA MARK-II** r
 
 .. image:: _images/TrigaG.png 
 
+- Flux in a one-dimensional TRIGA Reactor 
+
+.. image:: _images/TrigaF.png 
+
 The infinite cell in OpenMC `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ is represented by hexagonal cell with reflective boundaries. The infinite multiplication factor values ​​obtained in `OpenNTP <https://Openrsn.readthedocs.io/en/latest/index.html>`_ and `OpenMC <https://openmc.readthedocs.io/en/stable/>`_ are shown in Table below.
 
 .. table:: Calculate infinite multiplication factor :math:`k_{inf}`.

@@ -145,6 +145,7 @@ elif Methods == 'CP1D':
                 nusigf.append(data['data']['materials'][i]['XSNuFission'])
                 sigss.append(data['data']['materials'][i]['XSScatter Matrix'])
                 chi.append(data['data']['materials'][i]['XSChi']) 
+        CP1D.title1(1)
         if BC in ['Vacuum']:
             albedo = [0,0]
         elif BC in ['Reflective']:
@@ -169,15 +170,14 @@ elif Methods == 'CP1D':
         l = CP1D.matrix_l(sigs,fmmid,dim,[ng,totnfm,nmat])
         u = CP1D.matrix_u(sigs,fmmid,dim,[ng,totnfm,nmat])
         f = CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
-        a,b = CP1D.matrix_ab(matrix_i,l,w,u,f,[dim])
-        CP1D.title1(1) 
+        a,b = CP1D.matrix_ab(matrix_i,l,w,u,f,[dim]) 
         CP1D.timestamp()
         iter,eval,phi = CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])  
-        interval = datetime.now()-start  
-        print 'Total time to solution   ..............  ', interval    
         CP1D.title2() 
+        interval = datetime.now()-start 
         CP1D.output(str(start),albedo,str(interval),1./eval,sigt,nusigf,sigs,chi,dcell,
-                                          phi,eps,totnfm,order,iter,1,[dim,ng,nmat,nregion])
+                                          phi,eps,totnfm,order,iter,1,[dim,ng,nmat,nregion]) 
+        print 'Total time to solution   ..............  ', interval    
         del sigt,nusigf,sigs,chi,dcell,fmmid,l,d,c,ainv,w,u,f
         CP1D.plot_sla_cyl_sph(vol,1,phi,[totnfm,dim])
 
@@ -200,7 +200,8 @@ elif Methods == 'CP1D':
                 nusigf.append(data['data']['materials'][i]['XSNuFission'])
                 sigss.append(data['data']['materials'][i]['XSScatter Matrix'])
                 chi.append(data['data']['materials'][i]['XSChi'])  
-            
+        CP1D.title1(2)
+        CP1D.timestamp() 
         dim = ng*totnfm
         if BC in ['Vacuum']:
             albedo = 0
@@ -226,17 +227,14 @@ elif Methods == 'CP1D':
         l = CP1D.matrix_l(sigs,fmmid,dim,[ng,totnfm,nmat])
         u = CP1D.matrix_u(sigs,fmmid,dim,[ng,totnfm,nmat])
         f = CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
-        a,b = CP1D.matrix_ab(matrix_i,l,w,u,f,[dim])
-        interval = datetime.now()-start  
-        print 'Total time to solution   ..............  ', interval  
-        CP1D.title1(2)
-        CP1D.timestamp() 
+        a,b = CP1D.matrix_ab(matrix_i,l,w,u,f,[dim]) 
         iter,eval,phi = CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])   
         CP1D.title2() 
+        interval = datetime.now()-start 
         CP1D.output(str(start),[0,0],str(interval),1./eval,sigt,nusigf,sigs,chi,rayon,
                                           phi,eps,totnfm,order,iter,2,[dim,ng,nmat,nregion])
-        CP1D.plot_sla_cyl_sph(ray,0,phi,[totnfm,dim])
-
+        CP1D.plot_sla_cyl_sph(ray,0,phi,[totnfm,dim]) 
+        print 'Total time to solution   ..............  ', interval 
     if Geometry_type in ['Spherical Geometry']: 
         with open(filename) as json_data:
             data = json.load(json_data)
@@ -255,7 +253,9 @@ elif Methods == 'CP1D':
                 sigtt.append(data['data']['materials'][i]['XSTotal'])
                 nusigf.append(data['data']['materials'][i]['XSNuFission'])
                 sigss.append(data['data']['materials'][i]['XSScatter Matrix'])
-                chi.append(data['data']['materials'][i]['XSChi'])  
+                chi.append(data['data']['materials'][i]['XSChi']) 
+        CP1D.title1(3) 
+        CP1D.timestamp()
         dim = ng*totnfm
         if BC in ['Vacuum']:
             albedo = 0
@@ -280,15 +280,13 @@ elif Methods == 'CP1D':
         u = CP1D.matrix_u(sigs,fmmid,dim,[ng,totnfm,nmat])
         f = CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
         a,b = CP1D.matrix_ab(matrix_i,l,w,u,f,[dim])
-        CP1D.title1(3)
-        CP1D.timestamp()
         iter,eval,phi = CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])
-        interval = datetime.now()-start
-        print 'Total time to solution   ..............  ', interval
         CP1D.title2()
+        interval = datetime.now()-start
         CP1D.output(str(start),[0,0],str(interval),1./eval,sigt,nusigf,sigs,chi,rayon,
                                           phi,eps,totnfm,order,iter,3,[dim,ng,nmat,nregion])
         CP1D.plot_sla_cyl_sph(ray,0,phi,[totnfm,dim])
+        print 'Total time to solution   ..............  ', interval
 elif Methods == 'SN2D':
 #=========================================================================================
 #  Loading data for SN Method 2D
