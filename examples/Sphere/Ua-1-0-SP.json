@@ -1,0 +1,43 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 1,
+      "Total number of pin cells": 1,
+      "Total number of assemblies": 1,
+      "Core": [1],
+      "Total number of active pin cells": 1,
+      "Number of angular discretizations": 2,
+      "The l-order Legendre polynomial": 0,
+      "Maximum number of iterations": 200,
+      "Criterion of Keff convergence": 1.0E-6
+    }, 
+    "Assemblies": [
+      { 
+        "id": 1, 
+        "name": "Assembly 1",
+        "assembly": [1]
+      }
+], 
+    "PinCells": [
+      { 
+        "id": 1, 
+        "name": "Pin Cell 1",
+        "ray": [7.428998],
+        "mat_fill": [1],
+        "fine_mesh": [1000]
+      }
+], 
+    "materials": [
+      { 
+        "id": 1, 
+        "name": "Ua-1-0-SP",
+        "XSTotal": [0.3264],
+        "XSNuFission": [0.176256],
+        "XSScatter Matrix":[[[0.248064]]],
+        "XSChi":  [1.0]
+      }
+    ]
+  }
+}

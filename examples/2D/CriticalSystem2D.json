@@ -1,0 +1,81 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 3,
+      "Total number of pin cells": 3,
+      "Total number of assemblies": 1,
+      "Core":[[1]],
+      "Total number of active pin cells": 4,
+      "Number of angular discretizations": 8,
+      "The l-order Legendre polynomial": 0,
+      "Maximum number of iterations": 500,
+      "Criterion of Keff convergence": 1.0e-6
+    },
+    "Assemblies": [
+      {
+        "id": 1,
+        "nom": "assembly 1",
+        "assembly":[[1,2,3,3,3,3],
+                    [2,2,3,3,3,3],
+                    [3,3,3,3,3,3],
+                    [3,3,3,3,3,3],
+                    [3,3,3,3,3,3],
+                    [3,3,3,3,3,3]]
+      }
+],
+    "PinCells": [
+      {
+        "id": 1,
+        "nom": "cell 1",
+        "width_x":[10],
+        "width_y":[10],
+        "mat_fill": [[1]],
+        "fine_mesh": [[2]]
+      },
+      {
+        "id": 2,
+        "nom": "cell 2",
+        "width_x":[10],
+        "width_y":[10],
+        "mat_fill": [[2]],
+        "fine_mesh": [[2]]
+      },
+      {
+        "id": 3,
+        "nom": "cell 3",
+        "width_x":[10],
+        "width_y":[10],
+        "mat_fill": [[3]],
+        "fine_mesh": [[2]]
+      }
+],
+    "materials": [
+      {
+        "id": 1,
+        "nom": "Mat 1",
+        "XSTotal": [0.3264],
+        "XSNuFission": [0.11491],
+        "XSScatter Matrix":[[0.225216]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 2,
+        "nom": "Mat 2",
+        "XSTotal": [0.3264],
+        "XSNuFission": [0.10072],
+        "XSScatter Matrix":[[0.225216]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 3,
+        "nom": "Mat 3",
+        "XSTotal": [0.3264],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.29376]],
+        "XSChi":  [0.0]
+      }
+    ]
+  }
+}

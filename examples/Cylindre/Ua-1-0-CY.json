@@ -1,0 +1,79 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 1,
+      "Total number of pin cells": 1,
+      "Total number of assemblies": 1,
+      "Core": [1],
+      "Total number of active pin cells": 1,
+      "Number of angular discretizations": 2,
+      "The l-order Legendre polynomial": 0,
+      "Maximum number of iterations": 200,
+      "Criterion of Keff convergence": 1.0E-6
+    }, 
+    "Assemblies": [
+      { 
+        "id": 1, 
+        "name": "Assembly 1",
+        "assembly": [1]
+      }
+], 
+    "PinCells": [
+      { 
+        "id": 1, 
+        "name": "Pin Cell 1",
+        "ray": [5.284935],
+        "mat_fill": [1],
+        "fine_mesh": [1000]
+      }
+], 
+    "materials": [
+      { 
+        "id": 1, 
+        "name": "Ua-1-0-CY",
+        "XSTotal": [0.3264],
+        "XSNuFission": [0.176256],
+        "XSScatter Matrix":[[[0.248064]]],
+        "XSChi":  [1.0]
+      }
+    ]
+  }
+}
+
+
+
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 2,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material fills each region":[1],
+      "Ray for each region per [cm]":[1695.337621],
+      "Number of fine meshes": [100],
+      "Number of Angular Discretization": 2,
+      "The l-order Legendre polynomial": 0,
+      "Maximum Number of Iterations": 600,
+      "Criterion of Keff convergence": 1.0e-8
+    },
+    "materials": [
+      {
+        "id": 1,
+        "nom": "UD2O-2-O-SP",
+        "XSTotal": [0.33588, 0.54628],
+        "XSNuFission": [0.0070425, 0.2425],
+        "XSScatter Matrix":[[[0.319800, 0.0045552], 
+                            [0.000000, 0.42410]]],
+        "XSChi":  [1.0, 0.0]
+      }
+    ]
+  }
+}
+
+
+
+
+

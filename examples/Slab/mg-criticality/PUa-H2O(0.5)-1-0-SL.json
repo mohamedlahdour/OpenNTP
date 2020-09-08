@@ -1,0 +1,87 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 2,
+      "Total number of pin cells": 2,
+      "Total number of assemblies": 1,
+      "Total number of active pin cells": 1,
+      "Core":[1],
+      "Number of angular discretizations": 10,
+      "The l-order Legendre polynomial": 0,
+      "Maximum number of iterations": 200,
+      "Criterion of Keff convergence": 1.0e-5
+    },
+    "Assemblies": [
+      {
+        "id": 1,
+        "name": "1",
+        "assembly": [2,1,2]
+      }
+],
+    "PinCells": [
+      {
+        "id": 1,
+        "name": "Pu-239(a)",
+        "width":[2.635724],
+        "mat_fill": [1],
+        "fine_mesh": [10]
+      },
+      {
+        "id": 2,
+        "name": "H2O",
+        "width":[1.531863],
+        "mat_fill": [2],
+        "fine_mesh": [10]
+      }
+],
+    "materials": [
+      {
+        "id": 1,
+        "name": "Pu-239(a)",
+        "XSTotal": [0.32640],
+        "XSNuFission": [0.264384],
+        "XSScatter Matrix":[[0.2252161]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 2,
+        "name": "H2O",
+        "XSTotal": [0.32640],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.293760]],
+        "XSChi":  [0.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

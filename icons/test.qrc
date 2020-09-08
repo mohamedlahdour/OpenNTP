@@ -1,0 +1,40 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icons/1.png</file>
+    <file>icons/2.png</file>
+    <file>icons/3.png</file>
+    <file>icons/about.png</file>
+    <file>icons/Change_Theme.png</file>
+    <file>icons/Chi.png</file>
+    <file>icons/compile.png</file>
+    <file>icons/cylinder.png</file>
+    <file>icons/D.png</file>
+    <file>icons/F.png</file>
+    <file>icons/help_box.png</file>
+    <file>icons/L.png</file>
+    <file>icons/matrixa.png</file>
+    <file>icons/run.png</file>
+    <file>icons/Select_All.png</file>
+    <file>icons/self.copy.png</file>
+    <file>icons/self.cut.png</file>
+    <file>icons/self.exit_editor.png</file>
+    <file>icons/self.geometry.png</file>
+    <file>icons/self.new_file.png</file>
+    <file>icons/self.on_find.png</file>
+    <file>icons/self.open_file.png</file>
+    <file>icons/self.paste.png</file>
+    <file>icons/self.plot.png</file>
+    <file>icons/self.redo.png</file>
+    <file>icons/self.save_as.png</file>
+    <file>icons/self.save.png</file>
+    <file>icons/self.undo.png</file>
+    <file>icons/SigF.png</file>
+    <file>icons/SigS.png</file>
+    <file>icons/SigT.png</file>
+    <file>icons/slab.png</file>
+    <file>icons/sphere.png</file>
+    <file>icons/U.png</file>
+    <file>icons/SigF.png</file>
+    <file>icons/L.png</file>
+  </qresource>
+</RCC>

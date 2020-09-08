@@ -1,0 +1,48 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 1,
+      "Total number of pin cells": 1,
+      "Total number of assemblies": 1,
+      "Total number of active pin cells": 1,
+      "Core":[1],
+      "Number of angular discretizations": 20,
+      "The l-order Legendre polynomial": 1,
+      "Boundary conditions": "reflective",
+      "Maximum number of iterations": 200,
+      "Criterion of Keff convergence": 1.0e-5
+    },
+    "Assemblies": [
+      {
+        "id": 1,
+        "name": "1",
+        "assembly": [1]
+      }
+],
+    "PinCells": [
+      {
+        "id": 1,
+        "name": "1",
+        "width":[1.0],
+        "mat_fill": [1],
+        "fine_mesh": [10]
+      }
+],
+    "materials": [
+      { 
+        "id": 1, 
+        "name": "UD2Ob-1-1-IN",
+        "XSTotal": [0.54628],
+        "XSNuFission": [0.100574846],
+        "XSScatter Matrix":[[[0.464338]], [[0.112982569]]],
+        "XSChi":  [1.0]
+      }
+    ]  
+  }  
+}
+
+
+
+

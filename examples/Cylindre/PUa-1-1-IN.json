@@ -1,0 +1,29 @@
+{ 
+  "data": { 
+    "parameter": { 
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of Materials": 1,
+      "Total number of regions": 1,
+      "Which material fills each region": [1],
+      "Ray for each region per [cm]": [1.0],
+      "Number of fine meshes": [100],
+      "Number of Angular Discretization": 0,
+      "The l-order Legendre polynomial": 1,
+      "Maximum Number of Iterations": 200,
+      "Criterion of Keff convergence": 1e-8
+    }, 
+    "materials": [
+      { 
+        "id": 1, 
+        "nom": "material 1",
+        "XSTotal": [1.0],
+        "XSNuFission": [0.6666675],
+        "XSScatter Matrix":[[[0.733333]], [[0.20]]],
+        "XSChi":  [1.0]
+      }
+    ]  
+  }  
+}
+
+

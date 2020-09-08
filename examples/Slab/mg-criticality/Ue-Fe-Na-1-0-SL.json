@@ -1,0 +1,108 @@
+{
+  "data": {
+    "parameter": {
+      "id": 100,
+      "Total number of energy groups": 1,
+      "Total number of materials": 3,
+      "Total number of pin cells": 3,
+      "Total number of assemblies": 1,
+      "Total number of active pin cells": 1,
+      "Core":[1],
+      "Number of angular discretizations": 10,
+      "The l-order Legendre polynomial": 0,
+      "Maximum number of iterations": 200,
+      "Criterion of Keff convergence": 1.0e-5
+    },
+    "Assemblies": [
+      {
+        "id": 1,
+        "name": "1",
+        "assembly": [2,1,2,3]
+      }
+],
+    "PinCells": [
+      {
+        "id": 1,
+        "name": "U-235",
+        "width":[0.317337461],
+        "mat_fill": [1],
+        "fine_mesh": [10]
+      },
+      {
+        "id": 2,
+        "name": "Fe",
+        "width":[5.119720083],
+        "mat_fill": [2],
+        "fine_mesh": [10]
+      },
+      {
+        "id": 3,
+        "name": "Na",
+        "width":[2.002771002],
+        "mat_fill": [3],
+        "fine_mesh": [10]
+      }
+],
+    "materials": [
+      {
+        "id": 1,
+        "name": "U-235",
+        "XSTotal": [0.407407],
+        "XSNuFission": [0.1730686],
+        "XSScatter Matrix":[[0.328042]],
+        "XSChi":  [1.0]
+      },
+      {
+        "id": 2,
+        "name": "Fe",
+        "XSTotal": [0.23256],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.23209488]],
+        "XSChi":  [0.0]
+      },
+      {
+        "id": 3,
+        "name": "Na",
+        "XSTotal": [0.086368032],
+        "XSNuFission": [0.0],
+        "XSScatter Matrix":[[0.086368032]],
+        "XSChi":  [0.0]
+      }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
