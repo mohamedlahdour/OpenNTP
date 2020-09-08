@@ -1,15 +1,18 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html4" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Documentation: OpenRSN &mdash; OpenRSN 1.2 documentation</title>
+  <title>Documentation: OpenNTP &mdash; OpenNTP 1.2 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
 
   
   
@@ -17,7 +20,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -30,10 +35,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Quick Install Guide" href="Installation.html" /> 
@@ -50,7 +51,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> OpenRSN
+            <a href="#" class="icon icon-home" alt="Documentation Home"> OpenNTP
           
 
           
@@ -76,6 +77,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -97,6 +99,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -106,7 +109,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">OpenRSN</a>
+          <a href="#">OpenNTP</a>
         
       </nav>
 
@@ -135,9 +138,9 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Documentation: OpenRSN</li>
+      <li>Documentation: OpenNTP</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -156,32 +159,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="documentation-openrsn">
-<h1>Documentation: OpenRSN<a class="headerlink" href="#documentation-openrsn" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="documentation-openntp">
+<h1>Documentation: OpenNTP<a class="headerlink" href="#documentation-openntp" title="Permalink to this headline">¶</a></h1>
 <p>Neutron Transport Package with Graphical User Interface</p>
-<p>Neutron Transport Package <strong>OpenRSN</strong> (Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation using either:</p>
+<p>Neutron Transport Package <strong>OpenNTP</strong> (Open Neutron Transport Package from the Radiations and Nuclear Systems Group), is an open-source code written in FORTRAN90 for a pedagogical purpose to solve the steady-state multigroup neutron transport equation using either:</p>
 <ul class="simple">
 <li>Collision Probablity Method (CP) in One-Dimensional for Slab, Cylindrical or Spherical geoemtry.</li>
 <li>Discrete Ordinate Method (<span class="math notranslate nohighlight">\(S_{N}\)</span>) in One or Two-Dimensional for Cartesian Geometry.</li>
 <li>Method of Characteristics (MOC) in One-Dimensional for Slab Geometry.</li>
 </ul>
 <p>The code, including the graphical user interface is developed and maintained by <a class="reference external" href="https://github.com/mohamedlahdour">Mohamed LAHDOUR</a> (PhD student) and Prof. <a class="reference external" href="https://github.com/tarekbardouni">Tarek EL BARDOUNI</a> from <a class="reference external" href="http://www.fst.ac.ma/site/">University Abdelmalek Essaadi Tetouan Morocco</a> .</p>
-<p>The code with its GUI is developed and maintained by <a class="reference external" href="https://github.com/mohamedlahdour">Mohamed LAHDOUR</a> (PhD student) and Prof. <a class="reference external" href="https://github.com/tarekbardouni">Tarek EL BARDOUNI</a> from <a class="reference external" href="http://www.fst.ac.ma/site/">University Abdelmalek Essaadi Tetouan Morocco</a> .</p>
-<p><strong>OpenRSN’s main features are:</strong></p>
+<p><strong>OpenNTP’s main features are:</strong></p>
 <ul class="simple">
 <li>free &amp; open source software with a pedagogical purpose.</li>
 <li>solve the steady-state multigroup neutron transport equation in one, or two spatial dimensions.</li>
 <li>solve the steady-state multigroup neutron transport equation  in a multiplicative medium with isotropic and anisotropic scatternig source.</li>
 <li>simple framework to add and test new algorithms.</li>
-<li>provided with a graphical user interface written in Python programing language which has been developed to simplify the use of <strong>OpenRSN</strong>.</li>
+<li>provided with a graphical user interface written in Python programing language which has been developed to simplify the use of <strong>OpenNTP</strong>.</li>
 <li>computed results: <span class="math notranslate nohighlight">\(k_{eff}\)</span> and fluxes.</li>
 </ul>
 <div class="tip admonition">
 <p class="first admonition-title">Recommended publication for citing</p>
-<p class="last">Lahdour, M., Bardouni, T. E., Chakir, E., Benaalilou, K., Mohammed, M., Bougueniz, H.,
+<p>Lahdour, M., Bardouni, T. E., Chakir, E., Benaalilou, K., Mohammed, M., Bougueniz, H.,
 and Yaakoubi, H. E., “<a class="reference external" href="https://doi.org/10.1016/j.apradiso.2018.12.004">Ntp-ersn: A new package for solving the multigroup neutron
 transport equation in a slab geometry.</a>,”
-<em>Applied Radiation and Isotopes</em>, 145:73 – <strong>84</strong> (2019a).</p>
+<em>Applied Radiation and Isotopes</em>, 73:84 – <strong>145</strong> (2019a).</p>
+<p class="last">Lahdour, M., Bardouni, T. E., Mohammed, M., Ouahdani, S. E. “<a class="reference external" href="https://doi.org/10.1016/j.heliyon.2019.e02211">The discrete ordinate method
+for angular flux calculations in slab geometry.</a>,”
+<em>Heliyon</em>, e02211 <strong>5</strong> (2019).</p>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
@@ -233,11 +238,19 @@ transport equation in a slab geometry.</a>,”
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2019, Mohamed LAHDOUR
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -248,7 +261,6 @@ transport equation in a slab geometry.</a>,”
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
