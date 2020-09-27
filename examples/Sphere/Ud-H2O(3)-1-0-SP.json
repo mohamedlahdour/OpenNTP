@@ -26,14 +26,14 @@
         "name": "Pin Cell 1",
         "ray": [6.12745],
         "mat_fill": [1],
-        "fine_mesh": [1000]
+        "fine_mesh": [100]
       },
       { 
         "id": 2, 
         "name": "Pin Cell 2",
         "ray": [15.318626],
         "mat_fill": [2],
-        "fine_mesh": [1000]
+        "fine_mesh": [100]
       }
 ], 
     "materials": [

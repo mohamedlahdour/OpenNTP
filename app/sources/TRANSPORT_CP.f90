@@ -552,7 +552,7 @@
            eval = eval1
            write(*,2000)iter,1/eval,epsil1
        end do
-       !call NormalizeFlux(dim,totNFM,Nmat,ng,sigF,fmmid,delta,phi) 
+       call NormalizeFlux(dim,totNFM,Nmat,ng,sigF,fmmid,delta,phi) 
        2000 format("Iteration",i4,":",1x,"===>",1x,"keff =",F9.6,1x,"===>",1x,"res =",e10.3)
     end subroutine aleig
 !>BL18
@@ -1420,20 +1420,21 @@ end subroutine Output
     integer(kind=4), dimension(totNFM), intent(in) :: fmmid
     real(kind=4), dimension(dim), intent(inout) :: phi
     real(kind=4), dimension(totNFM,ng) :: flux
-    integer(kind=4) :: i,j,k,n
-    real(kind=4) :: norme,a1,a2,a3
+    integer(kind=4) :: i,j,n
+    real(kind=4) :: norme,a1
     ! Initialize local variables
     n=1
-       do i=1,ng
-          do j=1,totNFM
-             flux(j,i)=phi(n)
+       do j=1,ng
+          do i=1,totNFM
+             flux(i,j)=phi(n)
              n=n+1
           enddo
        enddo
-    ! Normalized source     
+    ! Normalized source 
+    norme=0.    
     do i = 1,totNFM
         a1 = sum(flux(i,:)*delta(i)*sigF(fmmid(i),:))
-        norme = norme  + sqrt(a1*a1)
+        norme = norme + sqrt(a1*a1)
     enddo
     flux = sum(delta)*(flux/norme)
     n=1

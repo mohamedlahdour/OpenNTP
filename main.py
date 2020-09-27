@@ -227,7 +227,7 @@ elif Methods == 'CP1D':
             f = app.CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
             a,b = app.CP1D.matrix_ab(matrix_i,l,w,u,f,[dim])
             app.CP1D.timestamp()
-            iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])
+            iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,sigf,fmmid,delta,Max_it,[ng,totnfm,nmat,dim]) 
             app.CP1D.plot_sla_cyl_sph(1,napc,delta,assembly,nfmesh,phi,fmmid,core,sigf,[dim,totnfm,nmat,ng,nx,nxx,npx,npc,na])
             app.CP1D.powerpf(napc,delta,assembly,nfmesh,phi,core,fmmid,sigf,[dim,totnfm,nmat,ng,nx,nxx,npx,npc,na])
             sfpc = app.CP1D.scalarfluxpinc(nmat,ng,nfmesh,delta,assembly,phi,core,[dim,totnfm,nx,nxx,npx,npc,na])
@@ -298,7 +298,7 @@ elif Methods == 'CP1D':
         u = app.CP1D.matrix_u(sigs,fmmid,dim,[ng,totnfm,nmat])
         f = app.CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
         a,b = app.CP1D.matrix_ab(matrix_i,l,w,u,f,[dim]) 
-        iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])   
+        iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,sigf,fmmid,vol,Max_it,[ng,totnfm,nmat,dim])  
         app.CP1D.title2() 
         interval = datetime.now()-start 
         app.CP1D.plot_sla_cyl_sph(0,napc,ray,assembly,nfmesh,phi,fmmid,core,sigf,[dim,totnfm,nmat,ng,nx,nxx,npx,npc,na])
@@ -368,7 +368,7 @@ elif Methods == 'CP1D':
         u = app.CP1D.matrix_u(sigs,fmmid,dim,[ng,totnfm,nmat])
         f = app.CP1D.matrix_f(nusigf,chi,fmmid,dim,[ng,totnfm,nmat])
         a,b = app.CP1D.matrix_ab(matrix_i,l,w,u,f,[dim]) 
-        iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,ng,totnfm,Max_it,[dim])   
+        iter,eval,phi = app.CP1D.aleig(a,b,eps,phi_guess,sigf,fmmid,vol,Max_it,[ng,totnfm,nmat,dim]) 
         app.CP1D.title2() 
         interval = datetime.now()-start 
         app.CP1D.plot_sla_cyl_sph(0,napc,ray,assembly,nfmesh,phi,fmmid,core,sigf,[dim,totnfm,nmat,ng,nx,nxx,npx,npc,na])

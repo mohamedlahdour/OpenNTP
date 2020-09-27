@@ -106,7 +106,6 @@ html_static_path = ['nstatic']
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'OpenNTPdoc'
 
-
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
@@ -134,7 +133,6 @@ latex_documents = [
     (master_doc, 'OpenNTP.tex', u'OpenNTP Documentation',
      u'Mohamed LAHDOUR', 'manual'),
 ]
-
 
 # -- Options for manual page output ------------------------------------------
 

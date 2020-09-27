@@ -165,24 +165,22 @@
             
   <div class="section" id="quick-install-guide">
 <h1>Quick Install Guide<a class="headerlink" href="#quick-install-guide" title="Permalink to this headline">¶</a></h1>
-<p>This quick install guide outlines the basic steps needed to install OpenNTP on your computer.</p>
+<p>This quick install guide outlines the basic steps needed to install <strong>OpenNTP</strong> on your computer.</p>
 <div class="section" id="installing-on-linux">
 <h2>Installing on Linux<a class="headerlink" href="#installing-on-linux" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><dl class="first docutils">
-<dt>If you are using Ubuntu 18.10 or newer, open a terminal in a GNU/Linux box then install gfortran with the following commands:</dt>
-<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gfortran</span>
+<dt>If you are using Ubuntu 20.04, open a terminal in a GNU/Linux box then install gfortran with the following commands:</dt>
+<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">gfortran</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>You need to install numpy (F2PY) and matplotlib library to run the package OpenNTP:</dt>
-<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pip</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">numpy</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">numpy</span> <span class="n">matplotlib</span>
+<dt>You need to install numpy (F2PY3) and matplotlib library to run the package OpenNTP:</dt>
+<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">numpy</span>
+<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">matplotlib</span>
 </pre></div>
 </div>
 </dd>
@@ -190,17 +188,14 @@
 </li>
 <li><dl class="first docutils">
 <dt>You need to install PyQt5 on Ubuntu with python to run the GUI:</dt>
-<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">pyqt5</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">pyqt5</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">pyqt5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
-<span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">qttools5</span><span class="o">-</span><span class="n">dev</span><span class="o">-</span><span class="n">tools</span>
+<dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">python3</span><span class="o">-</span><span class="n">pyqt5</span>
 </pre></div>
 </div>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Install the OpenNTP package</dt>
+<dt>Install the <strong>OpenNTP</strong> package</dt>
 <dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span>  <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">mohamedlahdour</span><span class="o">/</span><span class="n">OpenNTP</span><span class="o">.</span><span class="n">git</span>
 </pre></div>
 </div>
@@ -208,9 +203,9 @@
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Import the <em>OpenNTP</em> and run the package in the following way:</dt>
+<dt>Import the <strong>OpenNTP</strong> and run the package in the following way:</dt>
 <dd><div class="first last highlight-python notranslate"><div class="highlight"><pre><span></span>cd OpenNTP
-$ python main.py
+$ python3 gui.py
 </pre></div>
 </div>
 </dd>

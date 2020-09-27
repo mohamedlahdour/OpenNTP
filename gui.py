@@ -44,12 +44,6 @@ class EmittingStream(QtCore.QObject):
     def flush(self):
         pass
 
-
-# An example QObject (to be run in a QThread) which outputs information with print
-class LongRunningThing(QObject):
-    @pyqtSlot()
-    def run(self):
-        pass
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 class Window1(QWidget):
     def __init__(self,npc,nxpc,parent=None): 
@@ -829,6 +823,7 @@ class Application(QtWidgets.QMainWindow):
         self._initButtons()
         self.isFileOpen = False
         self.isFileCreate = False
+        self.initUI()
         widget = QWidget()
         topFiller = QWidget()
         topFiller.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
@@ -859,8 +854,7 @@ class Application(QtWidgets.QMainWindow):
         self.ui.action_Copy.triggered.connect(self.copy)
         self.ui.action_Paste.triggered.connect(self.paste)
         self.ui.action_Cut.triggered.connect(self.cut)
-        self.ui.action_Run.triggered.connect(self.start_thread1)
-        self.ui.pushButton_5.clicked.connect(self.start_thread1)
+        self.ui.action_Run.triggered.connect(self.run)
         self.ui.action_Compile_2.triggered.connect(self.compile)
         self.ui.action_Plot.triggered.connect(self.plot)
         self.ui.pushButton_22.clicked.connect(self.P_Ordinate)
@@ -1549,33 +1543,24 @@ class Application(QtWidgets.QMainWindow):
         self.ui.statusbar.showMessage('Loading url...', 5600)
         webbrowser.open(url)
 
-    @pyqtSlot()
-    def start_thread1(self):
-        self.thread = QThread()
-        self.long_running_thing = LongRunningThing()
-        self.long_running_thing.moveToThread(self.thread)
-        self.thread.started.connect(self.long_running_thing.run)
-        self.thread.start()
-        self.thread.quit()
+
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    @pyqtSlot()
+
+    def initUI(self):
+        # QProcess object for external app
+        self.process = QtCore.QProcess(self)
+        # QProcess emits `readyRead` when there is data to be read
+        self.process.readyReadStandardOutput.connect(self.stdoutReady)
+        self.process.readyReadStandardError.connect(self.stderrReady)
+
     def compile(self):
         """exécuté lors du clic sur le bouton
         """
-        #print ('Connecting process')
-        self.process = QtCore.QProcess(self)
-        self.process.readyReadStandardOutput.connect(self.stdoutReady)
-        self.process.readyReadStandardError.connect(self.stderrReady)
         #print ('Starting process')
         self.process.start('python3', ['app/compile.py'])
 
-    @pyqtSlot()
     def run(self):
-        #print ('Connecting process')
-        self.process = QtCore.QProcess(self)
-        self.process.readyReadStandardOutput.connect(self.stdoutReady)
-        self.process.readyReadStandardError.connect(self.stderrReady)
         #print ('Starting process')
         self.process.start('python3', ['main.py'])
         
@@ -1594,7 +1579,6 @@ class Application(QtWidgets.QMainWindow):
         text = text.decode("ascii")
         self.append_text(text)
 
-
     def stderrReady(self):
         text = bytearray(self.process.readAllStandardError())
         text = text.decode("ascii")
@@ -1608,7 +1592,7 @@ if __name__ == '__main__':
     qapp = QApplication(sys.argv) 
     app = Application(u'OpenNTP')
     app.show()
-    qapp.exec_()
+    sys.exit(qapp.exec_())
         
 
 
